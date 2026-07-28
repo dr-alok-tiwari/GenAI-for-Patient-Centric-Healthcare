@@ -4,7 +4,8 @@ import streamlit as st
 
 from modules import (
     about, assessment, cases, data_explorer, facilitator, governance, home,
-    labs, prompt_studio, resources, theory, tool_demos, tool_directory,
+    labs, medical_imaging, prompt_studio, resources, theory, tool_demos,
+    tool_directory,
 )
 from modules.common import APP_SUBTITLE, APP_TITLE, configure_page, footer
 
@@ -15,6 +16,7 @@ PAGES = {
     "Theory deck": ("🖥️", theory.render),
     "Tool directory": ("🧰", tool_directory.render),
     "Tool demo lab": ("▶️", tool_demos.render),
+    "Medical imaging lab": ("🩻", medical_imaging.render),
     "Prompt studio": ("✨", prompt_studio.render),
     "Hands-on labs": ("🧪", labs.render),
     "Data explorer": ("📊", data_explorer.render),

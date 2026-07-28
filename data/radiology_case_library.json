@@ -1,0 +1,302 @@
+[
+  {
+    "case_id": "RAD-001",
+    "icon": "🫁",
+    "title": "Chest X-ray: acute breathlessness",
+    "modality": "X-ray",
+    "body_region": "Chest",
+    "scenario": "A synthetic adult presents with acute breathlessness, cough and reduced oxygen saturation. A frontal chest radiograph is available for an educational systematic-review demonstration.",
+    "clinical_question": "Structure visible observations, assess technical adequacy and identify features that require urgent radiologist/clinician escalation.",
+    "systematic_review": [
+      "Confirm projection/view, rotation, inspiration, penetration and coverage",
+      "Review airway and central tracheal position",
+      "Review lungs and pleural spaces zone by zone",
+      "Review cardiac silhouette and mediastinal contours",
+      "Review diaphragms and costophrenic angles",
+      "Review bones, soft tissues and visible upper abdomen",
+      "Check for devices, tubes, lines and prior-study availability"
+    ],
+    "cannot_miss": [
+      "Pneumothorax or tension features",
+      "Large pleural effusion or major collapse",
+      "Diffuse air-space pattern with clinical instability",
+      "Marked mediastinal abnormality",
+      "Critical device or line malposition"
+    ],
+    "limitations": [
+      "A single frontal view may not localise or exclude subtle disease",
+      "Portable AP technique can magnify the heart and mediastinum",
+      "Clinical findings and prior imaging remain necessary"
+    ],
+    "human_owner": "radiologist/authorised clinician"
+  },
+  {
+    "case_id": "RAD-002",
+    "icon": "🧷",
+    "title": "Chest X-ray: tubes and line position",
+    "modality": "X-ray",
+    "body_region": "Chest",
+    "scenario": "A synthetic post-procedure portable chest radiograph is being reviewed for the position of visible support devices and immediate complications.",
+    "clinical_question": "Describe visible devices without inventing type or course, and flag any potentially critical malposition or post-procedure complication for immediate human review.",
+    "systematic_review": [
+      "Identify every visible tube, line, drain, wire or device",
+      "Trace each visible device along its complete imaged course",
+      "State whether the tip is visible and where it projects",
+      "Check lungs and pleura for post-procedure complications",
+      "Check mediastinum, cardiac silhouette and diaphragms",
+      "Compare with prior or procedural documentation when available"
+    ],
+    "cannot_miss": [
+      "Possible endotracheal, enteric or central line malposition",
+      "New pneumothorax",
+      "New large pleural collection or collapse",
+      "Device fragmentation or unexpected course"
+    ],
+    "limitations": [
+      "Projection does not prove intravascular or intraluminal location",
+      "Device identity and intended target must be confirmed from documentation",
+      "Immediate escalation follows local protocol"
+    ],
+    "human_owner": "radiologist/critical-care clinician"
+  },
+  {
+    "case_id": "RAD-003",
+    "icon": "🧠",
+    "title": "Non-contrast CT head: acute neurological symptoms",
+    "modality": "CT",
+    "body_region": "Head",
+    "scenario": "A synthetic patient has sudden focal neurological symptoms. Selected non-contrast CT head images are available for a teaching demonstration.",
+    "clinical_question": "Use a systematic acute CT head checklist and explicitly state that selected screenshots cannot replace review of the full series.",
+    "systematic_review": [
+      "Confirm study type, coverage, reconstruction and artefact",
+      "Review for acute haemorrhage by compartment",
+      "Assess grey-white differentiation and focal hypoattenuation",
+      "Assess mass effect, sulci, ventricles, cisterns and midline",
+      "Review posterior fossa on the complete series",
+      "Review calvarium, skull base, sinuses and mastoids",
+      "Confirm whether angiographic/perfusion imaging exists"
+    ],
+    "cannot_miss": [
+      "Acute intracranial haemorrhage",
+      "Mass effect, herniation or hydrocephalus",
+      "Large-territory early ischaemic change",
+      "Acute fracture with intracranial complication"
+    ],
+    "limitations": [
+      "A screenshot or one slice cannot exclude acute pathology",
+      "Windowing and complete multiplanar review are required",
+      "Stroke decisions require the authorised acute-stroke workflow"
+    ],
+    "human_owner": "radiologist/stroke clinician"
+  },
+  {
+    "case_id": "RAD-004",
+    "icon": "🫀",
+    "title": "CT pulmonary angiography: suspected embolism",
+    "modality": "CT",
+    "body_region": "Chest",
+    "scenario": "A synthetic CT pulmonary angiography case is used to demonstrate how AI should first assess contrast timing, motion and study completeness before describing possible filling defects.",
+    "clinical_question": "Structure technical adequacy, vascular observations and urgent associated findings without declaring or excluding embolism from selected images.",
+    "systematic_review": [
+      "Confirm angiographic phase, pulmonary arterial enhancement and motion",
+      "Review central through segmental pulmonary arteries on the full series",
+      "Check right-heart and septal appearance without inventing measurements",
+      "Review lung parenchyma, pleura and airways",
+      "Review mediastinum, aorta, upper abdomen and bones",
+      "Check for alternative or associated urgent findings"
+    ],
+    "cannot_miss": [
+      "Central or extensive pulmonary arterial filling defect",
+      "Possible right-heart strain features",
+      "Aortic emergency visible in the imaged field",
+      "Pneumothorax or other immediate thoracic emergency"
+    ],
+    "limitations": [
+      "Selected images cannot exclude segmental or subsegmental emboli",
+      "Poor contrast timing or motion may make the study non-diagnostic",
+      "Clinical probability and authorised management pathway remain essential"
+    ],
+    "human_owner": "radiologist/emergency clinician"
+  },
+  {
+    "case_id": "RAD-005",
+    "icon": "🧠",
+    "title": "MRI brain: mass or treatment follow-up",
+    "modality": "MRI",
+    "body_region": "Brain",
+    "scenario": "A synthetic MRI brain follow-up case includes selected sequences from a patient with a previously documented intracranial lesion.",
+    "clinical_question": "Describe sequence-specific observations and comparison needs without assigning tumour type, progression or treatment response from incomplete images.",
+    "systematic_review": [
+      "List available and missing sequences, planes and contrast status",
+      "Review lesion location, signal, margins and mass effect",
+      "Review enhancement only if pre/post-contrast images are available",
+      "Review diffusion and susceptibility when available",
+      "Review oedema, ventricles, cisterns and midline",
+      "Review remaining brain, extra-axial spaces and visible skull base",
+      "State the need for comparison with prior MRI"
+    ],
+    "cannot_miss": [
+      "Marked mass effect or herniation features",
+      "Acute haemorrhage or restricted diffusion",
+      "Obstructive hydrocephalus",
+      "Unexpected acute treatment complication"
+    ],
+    "limitations": [
+      "Do not infer enhancement without matched pre/post-contrast sequences",
+      "Do not assign tumour grade, molecular type or progression",
+      "Formal response assessment requires protocol-compliant complete studies and priors"
+    ],
+    "human_owner": "neuroradiologist/treating specialist"
+  },
+  {
+    "case_id": "RAD-006",
+    "icon": "🦴",
+    "title": "MRI spine: pain with neurological red flags",
+    "modality": "MRI",
+    "body_region": "Spine",
+    "scenario": "A synthetic patient has back pain and neurological red flags. Selected MRI spine images are available for educational review.",
+    "clinical_question": "Structure level-by-level observations and identify features requiring urgent escalation while acknowledging incomplete coverage.",
+    "systematic_review": [
+      "Confirm spinal region, sequences, planes and coverage",
+      "Review alignment, vertebral bodies and marrow signal",
+      "Review discs, canal, lateral recesses and neural foramina",
+      "Review spinal cord/conus/cauda equina as applicable",
+      "Review paraspinal and prevertebral soft tissues",
+      "Localise observations by the documented vertebral numbering method",
+      "Check prior imaging and clinical neurological level"
+    ],
+    "cannot_miss": [
+      "Severe canal compromise with neural compression",
+      "Cord/conus signal abnormality",
+      "Possible infection, epidural collection or destructive lesion",
+      "Acute unstable injury features"
+    ],
+    "limitations": [
+      "Do not invent vertebral numbering when transitional anatomy is possible",
+      "Selected sequences cannot exclude subtle cord, marrow or soft-tissue disease",
+      "Urgent neurological findings require direct clinical escalation"
+    ],
+    "human_owner": "radiologist/spine specialist"
+  },
+  {
+    "case_id": "RAD-007",
+    "icon": "🦴",
+    "title": "Musculoskeletal X-ray: acute trauma",
+    "modality": "X-ray",
+    "body_region": "Musculoskeletal",
+    "scenario": "A synthetic trauma case includes radiographs of an injured extremity for a systematic alignment, bone, joint and soft-tissue review.",
+    "clinical_question": "Describe visible traumatic findings and image adequacy without assigning management or clearing the injury from inadequate views.",
+    "systematic_review": [
+      "Confirm patient side marker, projections and inclusion of relevant joints",
+      "Review alignment and cortical continuity",
+      "Review trabecular pattern and focal bone density",
+      "Review joint congruity and joint spaces",
+      "Review soft-tissue swelling, gas and foreign material",
+      "Check for additional injuries within the field",
+      "State whether orthogonal or special views are missing"
+    ],
+    "cannot_miss": [
+      "Displaced or open-injury-associated fracture pattern",
+      "Joint dislocation or major incongruity",
+      "Neurovascular-risk alignment abnormality",
+      "Soft-tissue gas or unexpected foreign body"
+    ],
+    "limitations": [
+      "One projection cannot reliably exclude fracture or dislocation",
+      "Age-specific ossification and subtle injuries require expert review",
+      "Clinical tenderness and neurovascular examination remain essential"
+    ],
+    "human_owner": "radiologist/orthopaedic or emergency clinician"
+  },
+  {
+    "case_id": "RAD-008",
+    "icon": "🔊",
+    "title": "Abdominal ultrasound: right upper-quadrant pain",
+    "modality": "Ultrasound",
+    "body_region": "Abdomen",
+    "scenario": "A synthetic patient has right upper-quadrant pain. Selected ultrasound still images are available without the complete dynamic examination.",
+    "clinical_question": "Structure visible observations, missing views and required measurements without declaring a diagnosis from selected still images.",
+    "systematic_review": [
+      "Confirm organs/views represented and technical limitations",
+      "Review gallbladder lumen, wall and surrounding region",
+      "Review visible biliary tree and documented measurements",
+      "Review liver echotexture and focal observations",
+      "Review visible portal/hepatic vessels when provided",
+      "Review right kidney and visible adjacent structures",
+      "State which dynamic manoeuvres and Doppler views are absent"
+    ],
+    "cannot_miss": [
+      "Marked biliary dilatation or obstructive pattern",
+      "Pericholecystic collection or other complication feature",
+      "Large focal abnormality requiring urgent review",
+      "Unexpected free fluid in an unstable patient"
+    ],
+    "limitations": [
+      "Ultrasound is operator- and acquisition-dependent",
+      "Still images cannot reproduce probe compression, tenderness or dynamic scanning",
+      "Measurements and Doppler settings must not be invented"
+    ],
+    "human_owner": "radiologist/credentialed sonographer and clinician"
+  },
+  {
+    "case_id": "RAD-009",
+    "icon": "🤰",
+    "title": "Obstetric ultrasound: structured review",
+    "modality": "Ultrasound",
+    "body_region": "Obstetric",
+    "scenario": "A synthetic obstetric ultrasound teaching case contains selected de-identified still images and documented measurements.",
+    "clinical_question": "Organise the supplied observations and missing elements without estimating unprovided measurements, gestational conclusions or fetal status.",
+    "systematic_review": [
+      "Confirm stated indication, gestational context and study scope",
+      "List available views and documented measurements exactly",
+      "Review documented fetal number, presentation and cardiac activity only when shown",
+      "Review placenta, fluid and cervix only when adequately represented",
+      "Review anatomy according to the stated examination type",
+      "List all required views or measurements that are absent",
+      "Confirm comparison and follow-up ownership"
+    ],
+    "cannot_miss": [
+      "Any documented absence/abnormality of cardiac activity requiring immediate professional review",
+      "Major placental or bleeding-related concern",
+      "Severe fluid abnormality or other urgent documented feature",
+      "Maternal emergency visible or described in the supplied context"
+    ],
+    "limitations": [
+      "Do not infer fetal well-being from selected images",
+      "Do not invent gestational age, growth percentile or biometric measurements",
+      "Do not make sex determination or disclose protected information",
+      "Local legal and professional requirements apply"
+    ],
+    "human_owner": "qualified obstetric imaging professional/obstetrician"
+  },
+  {
+    "case_id": "RAD-010",
+    "icon": "🎗️",
+    "title": "Mammography: screening or diagnostic review",
+    "modality": "Mammography",
+    "body_region": "Breast",
+    "scenario": "A synthetic mammography case includes selected standard views for an educational comparison and reporting-structure demonstration.",
+    "clinical_question": "Structure observations, comparison requirements and limitations without assigning a final BI-RADS category or screening disposition.",
+    "systematic_review": [
+      "Confirm exam type, laterality, standard views and image adequacy",
+      "Review breast composition only when professionally assessable",
+      "Compare sides and available prior studies",
+      "Review for masses, asymmetries, distortion and calcifications",
+      "Review skin, nipple, axillary regions and visible nodes",
+      "Localise observations by side, view and depth without inventing measurements",
+      "State whether targeted ultrasound or additional views are already available"
+    ],
+    "cannot_miss": [
+      "Suspicious mass, distortion or calcification pattern",
+      "Concerning interval change from prior imaging",
+      "Skin/nipple change requiring prompt correlation",
+      "Technically inadequate study needing professional recall decision"
+    ],
+    "limitations": [
+      "Selected or compressed screenshots are inadequate for screening interpretation",
+      "Prior comparison and full-resolution approved workstations are required",
+      "Do not assign final BI-RADS, malignancy probability or patient disposition"
+    ],
+    "human_owner": "breast radiologist/authorised breast-imaging professional"
+  }
+]
