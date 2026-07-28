@@ -41,11 +41,19 @@ diagnostic classifier, sign a report, prescribe treatment or replace a qualified
 radiologist. DICOM metadata displayed by the app is restricted to selected
 technical tags; patient and study identifiers are deliberately excluded.
 
+Each of the ten categories includes five selectable teaching images, for a total
+of 50 bundled samples. The samples are public-domain or openly licensed images
+from Wikimedia Commons; source, author, license and modification details are
+recorded in `data/radiology_sample_manifest.json` and
+`assets/radiology_samples/ATTRIBUTION.md`. They are educational examples—not
+diagnostic ground truth or a validated model-evaluation dataset.
+
 ### Imaging workflow
 
 1. Select a radiological case.
-2. Confirm that the image and context are synthetic or properly de-identified.
-3. Upload a PNG, JPEG, TIFF or uncompressed DICOM image.
+2. Select one of its five bundled teaching samples, or choose **Upload my own**.
+3. For manual upload, confirm that the image and context are synthetic or
+   properly de-identified, then upload PNG, JPEG, TIFF or uncompressed DICOM.
 4. Review the image preview, technical indicators and limitations.
 5. Download the multimodal prompt and use it with an institution-approved account.
 6. Paste the resulting draft into the structural safety audit.

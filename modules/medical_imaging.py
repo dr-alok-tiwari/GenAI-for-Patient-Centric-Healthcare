@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import streamlit as st
 
-from .common import badges, load_json, section_header, set_visited
+from .common import ROOT, badges, load_json, section_header, set_visited
 from .imaging_core import (
     build_multimodal_prompt,
     compute_technical_metrics,
@@ -26,7 +26,7 @@ def render() -> None:
     section_header(
         "Radiology demonstration",
         "Medical Imaging & Multimodal AI Lab",
-        "Upload a synthetic or properly de-identified image, run local technical checks, build a modality-specific multimodal prompt and audit the AI-assisted draft before professional review.",
+        "Choose a bundled public teaching sample or upload a synthetic/properly de-identified image, run local technical checks, build a modality-specific multimodal prompt and audit the AI-assisted draft before professional review.",
         "🩻",
     )
     st.markdown(
@@ -37,6 +37,7 @@ def render() -> None:
     )
 
     cases = load_json("radiology_case_library.json")
+    sample_manifest = load_json("radiology_sample_manifest.json")
     modalities = ["All"] + list(dict.fromkeys(case["modality"] for case in cases))
     f1, f2 = st.columns([0.8, 1.2])
     with f1:
@@ -81,26 +82,73 @@ def render() -> None:
             height=135,
         )
 
-    privacy_confirmed = st.checkbox(
-        "I confirm that the file and context are synthetic or properly de-identified and approved for this workshop environment.",
-        value=False,
+    st.subheader("Choose an image")
+    image_source = st.radio(
+        "Image source",
+        ["Use a bundled sample", "Upload my own"],
+        horizontal=True,
+        help="Every radiological case includes five public teaching samples. Manual PNG, JPEG, TIFF and DICOM upload remains available.",
     )
-    uploaded = st.file_uploader(
-        "Upload PNG, JPEG, TIFF or uncompressed DICOM",
-        type=["png", "jpg", "jpeg", "tif", "tiff", "dcm", "dicom"],
-        disabled=not privacy_confirmed,
-        help="DICOM objects can contain hidden identifiers. Use synthetic or institutionally de-identified files only.",
-    )
-    st.caption(
-        "The app does not call an external AI service. On a hosted Streamlit deployment, the hosting server still processes the upload; follow your institution’s data policy."
-    )
+    case_samples = [
+        sample
+        for sample in sample_manifest["samples"]
+        if sample["case_id"] == case["case_id"]
+    ]
+    selected_sample = None
+    uploaded = None
+    if image_source == "Use a bundled sample":
+        sample_options = {
+            f"{sample['sample_id']} · {sample['title']}": sample for sample in case_samples
+        }
+        if not sample_options:
+            st.error("No bundled sample is configured for this radiological case.")
+        else:
+            sample_label = st.selectbox("Bundled teaching image", list(sample_options))
+            selected_sample = sample_options[sample_label]
+            author = selected_sample["author"] or "Author not supplied on source page"
+            license_label = selected_sample["license"]
+            source_url = selected_sample["source_page"]
+            license_url = selected_sample["license_url"] or source_url
+            st.caption(
+                "Public teaching image; not diagnostic ground truth or a validated model-evaluation dataset. "
+                f"Credit: {author}."
+            )
+            st.markdown(
+                f"[View original source ↗]({source_url}) · "
+                f"[{license_label} license ↗]({license_url})"
+            )
+    else:
+        privacy_confirmed = st.checkbox(
+            "I confirm that the file and context are synthetic or properly de-identified and approved for this workshop environment.",
+            value=False,
+        )
+        uploaded = st.file_uploader(
+            "Upload PNG, JPEG, TIFF or uncompressed DICOM",
+            type=["png", "jpg", "jpeg", "tif", "tiff", "dcm", "dicom"],
+            disabled=not privacy_confirmed,
+            help="DICOM objects can contain hidden identifiers. Use synthetic or institutionally de-identified files only.",
+        )
+        st.caption(
+            "The app does not call an external AI service. On a hosted Streamlit deployment, the hosting server still processes the upload; follow your institution’s data policy."
+        )
 
     loaded = None
     metrics = None
     observations: list[str] = []
-    if uploaded is not None:
+    image_caption = ""
+    if selected_sample is not None:
+        sample_path = ROOT / selected_sample["local_path"]
+        try:
+            loaded = load_medical_image(sample_path.read_bytes(), sample_path.name)
+            image_caption = f"Bundled teaching sample • {selected_sample['title']}"
+            metrics = compute_technical_metrics(loaded.image)
+            observations = technical_observations(metrics)
+        except (OSError, ValueError) as exc:
+            st.error(f"The bundled sample could not be loaded: {exc}")
+    elif uploaded is not None:
         try:
             loaded = load_medical_image(uploaded.getvalue(), uploaded.name)
+            image_caption = f"De-identified workshop upload • {loaded.source_format}"
             metrics = compute_technical_metrics(loaded.image)
             observations = technical_observations(metrics)
         except ValueError as exc:
@@ -119,14 +167,15 @@ def render() -> None:
     with image_tab:
         if loaded is None:
             st.info(
-                "Select a case, confirm the data boundary and upload an image. The remaining tabs can still be used to prepare the workflow without an image."
+                "Select a bundled sample or choose manual upload and provide an approved image. "
+                "The remaining tabs can still be used to prepare the workflow without an image."
             )
         else:
             left, right = st.columns([1.15, 0.85], gap="large")
             with left:
                 st.image(
                     loaded.image,
-                    caption=f"De-identified workshop preview • {loaded.source_format}",
+                    caption=image_caption,
                     use_column_width=True,
                     clamp=True,
                 )
