@@ -8,14 +8,16 @@ from typing import Any
 import pandas as pd
 import streamlit as st
 
+from .brand import BRAND
+
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 DATA = ROOT / "data"
 DOWNLOADS = ASSETS / "downloads"
 SLIDES = ASSETS / "slides"
 
-APP_TITLE = "GenAI for Patient-Centric Healthcare"
-APP_SUBTITLE = "Interactive MDP Studio for Doctors & Pharma Professionals"
+APP_TITLE = BRAND["title"]
+APP_SUBTITLE = BRAND["subtitle"]
 
 
 def configure_page() -> None:
@@ -24,7 +26,7 @@ def configure_page() -> None:
         page_icon="⚕️",
         layout="wide",
         initial_sidebar_state="expanded",
-        menu_items={"About": "A local-first, synthetic-data learning studio for a 150-minute healthcare and pharma GenAI MDP."},
+        menu_items={"About": "Alkem AI Masterclass: a local-first, synthetic-data learning studio for healthcare and pharma professionals."},
     )
     inject_css()
     initialize_state()
@@ -68,6 +70,7 @@ def inject_css() -> None:
         .hero-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(3,37,48,.95) 0%,rgba(3,37,48,.76) 49%,rgba(3,37,48,.12) 100%); }
         .hero-content { position:relative; z-index:2; padding:52px; max-width:790px; color:white; }
         .hero-kicker { text-transform:uppercase; font-size:.76rem; letter-spacing:.16em; font-weight:850; color:#67e8f9; }
+        .brand-lockup { display:inline-flex; align-items:center; padding:.35rem .7rem; border:1px solid rgba(255,255,255,.3); border-radius:999px; font-size:.72rem; font-weight:900; letter-spacing:.12em; }
         .hero h1 { color:white; font-size:clamp(2.25rem,4vw,3.25rem); line-height:1.03; margin:.52rem 0 .9rem; }
         .hero p { color:#e6f7fb; font-size:1.07rem; line-height:1.58; }
         .badge-row { display:flex; flex-wrap:wrap; gap:.42rem; align-items:center; margin:.45rem 0; }
@@ -123,13 +126,14 @@ def image_as_data_uri(path: Path) -> str:
     return f"data:{mime};base64,{data}"
 
 
-def hero(title: str, subtitle: str, image_name: str = "hero.png", kicker: str = "Management Development Programme") -> None:
+def hero(title: str, subtitle: str, image_name: str = "hero.png", kicker: str = "Alkem AI Masterclass") -> None:
     uri = image_as_data_uri(ASSETS / image_name)
     st.markdown(
         f"""
         <div class="hero" style="background-image:url('{uri}')">
           <div class="hero-overlay"></div>
           <div class="hero-content">
+            <div class="brand-lockup">ALKEM&nbsp;&nbsp;|&nbsp;&nbsp;AI MASTERCLASS</div>
             <div class="hero-kicker">{kicker}</div>
             <h1>{title}</h1><p>{subtitle}</p>
             <div class="badge-row">
@@ -205,7 +209,7 @@ def download_dataset(filename: str, label: str | None = None, key: str | None = 
 
 
 def footer() -> None:
-    st.markdown("<div class='footer'>GenAI for Patient-Centric Healthcare • Synthetic-data learning studio • Developed for executive education</div>", unsafe_allow_html=True)
+    st.markdown("<div class='footer'>Alkem AI Masterclass • GenAI for Patient-Centric Healthcare • Synthetic-data learning studio</div>", unsafe_allow_html=True)
 
 
 def set_visited(page: str) -> None:

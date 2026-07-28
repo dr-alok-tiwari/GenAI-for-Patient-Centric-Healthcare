@@ -46,34 +46,49 @@ def render() -> None:
     section_header("Visual exploration", "Build a quick descriptive chart", icon="📈")
     categorical = [c for c in df.columns if df[c].dtype == "object" and 1 < df[c].nunique() <= 25]
     numeric = df.select_dtypes(include="number").columns.tolist()
-    chart_type = st.radio("Chart", ["Category counts", "Histogram", "Scatter"], horizontal=True)
+    chart_options = []
+    if categorical:
+        chart_options.append("Category counts")
+    if numeric:
+        chart_options.append("Histogram")
+    if len(numeric) >= 2:
+        chart_options.append("Scatter")
+    if not chart_options:
+        chart_options.append("Column profile")
+    chart_type = st.radio("Chart", chart_options, horizontal=True)
     if chart_type == "Category counts":
-        if not categorical:
-            st.info("This dataset has no suitable low-cardinality categorical column.")
-        else:
-            col = st.selectbox("Category column", categorical)
-            counts = df[col].fillna("Missing").value_counts().reset_index()
-            counts.columns = [col, "Count"]
-            fig = px.bar(counts, x=col, y="Count", text_auto=True, title=f"{col}: record count")
-            fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=80), xaxis_tickangle=-25)
-            st.plotly_chart(fig, use_container_width=True)
+        col = st.selectbox("Category column", categorical)
+        counts = df[col].fillna("Missing").value_counts().reset_index()
+        counts.columns = [col, "Count"]
+        fig = px.bar(counts, x=col, y="Count", text_auto=True, title=f"{col}: record count")
+        fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=80), xaxis_tickangle=-25)
+        st.plotly_chart(fig, use_container_width=True)
     elif chart_type == "Histogram":
-        if not numeric:
-            st.info("This dataset has no numeric column.")
-        else:
-            col = st.selectbox("Numeric column", numeric)
-            fig = px.histogram(df, x=col, nbins=15, title=f"Distribution of {col}")
-            fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=50))
-            st.plotly_chart(fig, use_container_width=True)
+        col = st.selectbox("Numeric column", numeric)
+        fig = px.histogram(df, x=col, nbins=15, title=f"Distribution of {col}")
+        fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=50))
+        st.plotly_chart(fig, use_container_width=True)
+    elif chart_type == "Scatter":
+        x = st.selectbox("X axis", numeric, index=0)
+        y = st.selectbox("Y axis", numeric, index=1)
+        color = st.selectbox("Colour group", ["None"] + categorical)
+        fig = px.scatter(df, x=x, y=y, color=None if color == "None" else color, hover_data=df.columns[:3], title=f"{y} versus {x}")
+        fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=50))
+        st.plotly_chart(fig, use_container_width=True)
     else:
-        if len(numeric) < 2:
-            st.info("At least two numeric columns are required.")
-        else:
-            x = st.selectbox("X axis", numeric, index=0)
-            y = st.selectbox("Y axis", numeric, index=1)
-            color = st.selectbox("Colour group", ["None"] + categorical)
-            fig = px.scatter(df, x=x, y=y, color=None if color == "None" else color, hover_data=df.columns[:3], title=f"{y} versus {x}")
-            fig.update_layout(height=460, margin=dict(l=25, r=25, t=60, b=50))
-            st.plotly_chart(fig, use_container_width=True)
+        profile = pd.DataFrame(
+            {
+                "Column": df.columns,
+                "Type": [str(df[column].dtype) for column in df.columns],
+                "Unique values": [int(df[column].nunique(dropna=True)) for column in df.columns],
+                "Missing": [int(df[column].isna().sum()) for column in df.columns],
+                "Example": [
+                    str(df[column].dropna().iloc[0]) if not df[column].dropna().empty else "Missing"
+                    for column in df.columns
+                ],
+            }
+        )
+        st.dataframe(profile, use_container_width=True, hide_index=True)
+        st.caption("This complete profile is the supported visual response for datasets without chart-compatible columns.")
 
     st.caption("Charts are descriptive learning aids. Do not infer efficacy, safety or clinical associations from synthetic data.")

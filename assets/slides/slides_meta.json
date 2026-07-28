@@ -2,111 +2,187 @@
   {
     "number": 1,
     "image": "page-01.png",
-    "chapter": "Opening & Outcomes",
-    "title": "Generative AI for Patient-Centric Healthcare",
-    "summary": "A 150-minute masterclass for doctors, hospital leaders, pharma professionals, educators and researchers, built around clinician-in-the-loop practice and synthetic data.",
-    "notes": "Open by asking participants to name one task that consumes time but does not require autonomous clinical judgement. Reinforce that the programme is 60 minutes of theory followed by 90 minutes of hands-on work.",
-    "cue": "Ask: Where could GenAI create patient value without taking decision authority away from a professional?",
-    "badges": ["60 min theory", "90 min lab", "Synthetic data", "Clinician-in-the-loop"],
+    "title": "GenAI for Patient-Centric Healthcare",
+    "chapter": "Opening",
+    "summary": "Alkem AI Masterclass title and programme promise.",
+    "cue": "Ask for one workflow pain point from the room.",
+    "notes": "Establish scope and safety contract.",
+    "badges": [
+      "60 + 90 min",
+      "Four pillars"
+    ],
     "related_labs": []
   },
   {
     "number": 2,
     "image": "page-02.png",
-    "chapter": "Opening & Outcomes",
-    "title": "Why GenAI Matters in Healthcare and Pharma",
-    "summary": "The slide contrasts the scale of information and documentation burden with what GenAI can support and what it must never do autonomously.",
-    "notes": "Use the three-column logic: challenge, capability, limitation. Ask participants to distinguish drafting support from diagnosis or treatment authority.",
-    "cue": "Run a quick poll: Which is the bigger problem in your setting—documentation, evidence search, patient communication or data analysis?",
-    "badges": ["Capability map", "Limits", "Human verification"],
-    "related_labs": [1, 3]
+    "title": "The learning contract",
+    "chapter": "Opening",
+    "summary": "Four rules: approved data, bounded task, source verification, and human authority.",
+    "cue": "Have participants repeat the four rules in one sentence.",
+    "notes": "Use a prescription error example to make the contract concrete.",
+    "badges": [
+      "Synthetic data",
+      "Human authority"
+    ],
+    "related_labs": []
   },
   {
     "number": 3,
     "image": "page-03.png",
-    "chapter": "Tool Landscape",
-    "title": "Twelve Application Categories",
-    "summary": "A functional map of GenAI tools across patient communication, multilingual education, documentation, reasoning, research, medical affairs, pharmacovigilance, trials, analytics, design, operations and governance.",
-    "notes": "Do not teach tools as a popularity list. Teach selection by task, data sensitivity, patient impact, evidence requirements, and the institution-approved environment.",
-    "cue": "Choose one category and ask: what evidence or data would this tool need, and who must approve the output?",
-    "badges": ["29 tools", "12 categories", "Free/freemium first"],
-    "related_labs": [1, 2, 3, 4, 5, 6]
+    "title": "Four pillars",
+    "chapter": "Programme map",
+    "summary": "A concise architecture for patient, clinical, pharma/research, and governance use cases.",
+    "cue": "Ask participants to stand or raise a hand for their primary pillar.",
+    "notes": "Show how workflows can span pillars.",
+    "badges": [
+      "4 pillars",
+      "24 workflows"
+    ],
+    "related_labs": []
   },
   {
     "number": 4,
     "image": "page-04.png",
-    "chapter": "Patient Centricity",
-    "title": "Patient-Centric Applications",
-    "summary": "GenAI can help simplify discharge instructions, prepare multilingual counselling, support shared decision-making aids and visualize patient journeys.",
-    "notes": "Emphasize health literacy, teach-back, cultural context and the risk of altering medicine names, doses or clinical probabilities during simplification or translation.",
-    "cue": "Ask participants to recall a discharge or counselling failure caused by misunderstanding rather than lack of clinical knowledge.",
-    "badges": ["Plain language", "Teach-back", "Multilingual", "Shared decisions"],
-    "related_labs": [1, 2]
+    "title": "Prescription extraction",
+    "chapter": "Pillar 1",
+    "summary": "A safe separation of extraction, explanation, and human verification.",
+    "cue": "Hide reference values until after extraction.",
+    "notes": "Use the synthetic prescription image; never ask participants to use real patient documents.",
+    "badges": [
+      "Synthetic prescription",
+      "No guessing"
+    ],
+    "related_labs": [
+      1
+    ]
   },
   {
     "number": 5,
     "image": "page-05.png",
-    "chapter": "Clinical Workflows",
-    "title": "Doctor Productivity: Documentation and Reasoning",
-    "summary": "High-value workflows include OPD summaries, SOAP notes, referral letters, prior-authorisation drafts, differential diagnosis checklists, red-flag extraction and follow-up plans.",
-    "notes": "Separate documentation assistance from clinical reasoning. Use de-identified or synthetic cases in general-purpose tools and require explicit review before any content enters a clinical record.",
-    "cue": "Demonstrate how a chain-of-verification prompt forces supporting, opposing and missing evidence to remain visible.",
-    "badges": ["SOAP", "Referral", "DDx checklist", "Red flags"],
-    "related_labs": [1, 3]
+    "title": "Patient action plan",
+    "chapter": "Pillar 1",
+    "summary": "Plain-language discharge and teach-back without changing clinical meaning.",
+    "cue": "Ask what must never change during simplification.",
+    "notes": "Connect clarity to teach-back and translation review.",
+    "badges": [
+      "Teach-back",
+      "Multilingual review"
+    ],
+    "related_labs": [
+      3
+    ]
   },
   {
     "number": 6,
     "image": "page-06.png",
-    "chapter": "Pharma Workflows",
-    "title": "Medical Affairs, Safety and Clinical Trials",
-    "summary": "GenAI can support balanced medical-information drafts, adverse-event intake, KOL briefings, trial eligibility summaries, regulatory-safe internal communication and literature surveillance.",
-    "notes": "All external pharma outputs remain subject to medical, legal and regulatory review. Avoid promotional drift, unsupported causality, and hidden changes to protocol or label language.",
-    "cue": "Ask: Which parts of a medical-information response can be drafted by AI, and which parts require accountable professional sign-off?",
-    "badges": ["MLR review", "PV intake", "Trial criteria", "Non-promotional"],
-    "related_labs": [4, 5]
+    "title": "Medical-image boundary",
+    "chapter": "Pillar 2",
+    "summary": "A non-diagnostic observation workflow with limitations and escalation.",
+    "cue": "Model the boundary by refusing to provide a diagnosis.",
+    "notes": "Use only the synthetic radiograph and product limitation source.",
+    "badges": [
+      "No diagnosis",
+      "Qualified interpretation"
+    ],
+    "related_labs": [
+      2
+    ]
   },
   {
     "number": 7,
     "image": "page-07.png",
-    "chapter": "Research Workflows",
-    "title": "Literature Review to Manuscript",
-    "summary": "The research workflow moves from PICO and source discovery to evidence tables, gap extraction, drafting support, reference management and disclosure of AI assistance.",
-    "notes": "Keep search strategies reproducible, verify every citation against the source, distinguish extracted facts from inference and disclose material AI assistance according to journal policy.",
-    "cue": "Compare semantic discovery tools with PubMed: exploration can be AI-assisted, but systematic coverage needs an explicit reproducible method.",
-    "badges": ["PICO", "Evidence table", "Citation checking", "AI disclosure"],
-    "related_labs": [5]
+    "title": "Clinical reasoning",
+    "chapter": "Pillar 2",
+    "summary": "Common, cannot-miss, missing data, and escalation kept separate.",
+    "cue": "Pause for a cognitive-bias check.",
+    "notes": "Judge the checklist against the case, not its fluency.",
+    "badges": [
+      "No final diagnosis",
+      "Red flags"
+    ],
+    "related_labs": [
+      4
+    ]
   },
   {
     "number": 8,
     "image": "page-08.png",
-    "chapter": "Governance",
-    "title": "Safety, Privacy, Ethics and Governance",
-    "summary": "The slide links regulatory principles with four recurring risks: hallucination, bias, privacy breach and over-reliance, followed by debate cases.",
-    "notes": "Update the privacy message for 2026: do not use personal/public accounts for identifiable data. Some institution-contracted healthcare products may support regulated workflows, but only within approved governance, contracts and access controls.",
-    "cue": "Use the medication-stopping, chatbot-triage and AI-written literature review cases as boundary tests.",
-    "badges": ["Privacy", "Bias", "Hallucination", "Accountability"],
-    "related_labs": [1, 3, 4, 5]
+    "title": "PV and evidence",
+    "chapter": "Pillar 3",
+    "summary": "A side-by-side boundary for safety intake and evidence work.",
+    "cue": "Ask which decisions cannot be delegated in each lane.",
+    "notes": "Demonstrate neutral intake and citation opening.",
+    "badges": [
+      "PV review",
+      "Open every source"
+    ],
+    "related_labs": [
+      5,
+      6
+    ]
   },
   {
     "number": 9,
     "image": "page-09.png",
-    "chapter": "Hands-On Lab",
-    "title": "Six Exercises in 90 Minutes",
-    "summary": "The lab sequence covers discharge simplification, multilingual counselling, differential diagnosis safeguards, adverse-event triage, literature review and patient-feedback analytics.",
-    "notes": "Keep each exercise to 15 minutes: 3 minutes to orient, 6 minutes to run, 4 minutes to verify, and 2 minutes to record a human decision. The output is not complete until the review checklist is finished.",
-    "cue": "Assign different tools to teams so the debrief compares workflows and limitations rather than merely comparing prose quality.",
-    "badges": ["6 exercises", "15 min each", "Tool comparison", "Peer debrief"],
-    "related_labs": [1, 2, 3, 4, 5, 6]
+    "title": "Risk and controls",
+    "chapter": "Pillar 4",
+    "summary": "A practical four-axis screen for data, impact, autonomy, and reach.",
+    "cue": "Classify one audience use case live.",
+    "notes": "Treat the result as governance input, not legal advice.",
+    "badges": [
+      "Risk tier",
+      "Stop condition"
+    ],
+    "related_labs": []
   },
   {
     "number": 10,
     "image": "page-10.png",
-    "chapter": "Implementation",
-    "title": "Prompt Bank and 30-60-90 Day Roadmap",
-    "summary": "Reusable prompt patterns and a phased roadmap help participants move from foundation to integration and leadership while retaining data boundaries and human review.",
-    "notes": "Close with one low-risk use case, one named owner, one measurable outcome, one data boundary and one stop condition. Avoid vague commitments such as 'use AI more'.",
-    "cue": "Ask each team to write its first pilot as a single sentence: We will use [tool] for [task] with [data boundary], reviewed by [role], measured by [metric].",
-    "badges": ["Prompt patterns", "30-60-90", "Pilot plan", "Governance"],
-    "related_labs": [1, 2, 3, 4, 5, 6]
+    "title": "Workflow-first tool selection",
+    "chapter": "Tool selection",
+    "summary": "Cascading selectors guarantee complete, supported routes.",
+    "cue": "Show a role/task/language combination in Prompt Studio.",
+    "notes": "Explain that unsupported intersections are removed before selection.",
+    "badges": [
+      "100% visible-option coverage",
+      "Verified alternatives"
+    ],
+    "related_labs": []
+  },
+  {
+    "number": 11,
+    "image": "page-11.png",
+    "title": "Six hands-on labs",
+    "chapter": "Hands-on",
+    "summary": "The six 15-minute medical and pharma labs.",
+    "cue": "Assign tools and cases before the clock starts.",
+    "notes": "Use the 3-6-4-2 timing and require a decision record.",
+    "badges": [
+      "6 × 15 min",
+      "Accept/edit/reject/escalate"
+    ],
+    "related_labs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "number": 12,
+    "image": "page-12.png",
+    "title": "30-day responsible pilot",
+    "chapter": "Close",
+    "summary": "A six-part pilot canvas and the final accountability message.",
+    "cue": "Ask every team for one success measure and one stop rule.",
+    "notes": "End with a written implementation commitment.",
+    "badges": [
+      "Reversible pilot",
+      "Named owner"
+    ],
+    "related_labs": []
   }
 ]

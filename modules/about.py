@@ -17,7 +17,7 @@ def render() -> None:
             ### Dr. Alok Tiwari
             **Assistant Professor – Big Data Analytics, Goa Institute of Management**
 
-            This application packages a 150-minute Management Development Programme for doctors and pharma professionals. It uses the supplied 10-page workshop PDF as the theory source and converts its cases into interactive, synthetic-data laboratories.
+            This application packages a 150-minute Alkem AI Masterclass for doctors and pharma professionals. It combines a refreshed, editable 12-slide four-pillar theory sequence with interactive synthetic-data laboratories.
 
             **Focus areas:** AI in healthcare, healthcare analytics, medical imaging, machine learning, research methods, executive education and responsible GenAI adoption.
             """
@@ -36,7 +36,7 @@ def render() -> None:
     )
     st.subheader("Workshop content at a glance")
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Presentation pages", 10)
+    c1.metric("Presentation slides", 12)
     c2.metric("Guided tool demos", 29)
-    c3.metric("Synthetic datasets", 18)
+    c3.metric("Synthetic datasets", 20)
     c4.metric("Hands-on exercises", 6)

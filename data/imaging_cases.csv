@@ -1,0 +1,2 @@
+image_id,modality,body_region,view,image_file,source_status,training_goal,reference_boundary
+IMG-SYN-001,Synthetic radiograph,Chest,PA-style,synthetic_chest_xray.png,Fully AI-generated synthetic image,"Separate adequacy, visible observations, uncertainty, cannot-assess items, and human escalation.",No diagnostic ground truth is asserted. A qualified clinician must interpret real medical images using approved workflows.

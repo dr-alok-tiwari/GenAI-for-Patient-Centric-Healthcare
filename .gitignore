@@ -5,3 +5,7 @@ venv/
 .env
 .DS_Store
 .streamlit/secrets.toml
+node_modules/
+assets/downloads/*.inspect.ndjson
+assets/slides/*.layout.json
+assets/slides/deck-montage.webp

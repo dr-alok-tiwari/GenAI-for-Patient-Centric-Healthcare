@@ -26,7 +26,7 @@ git push -u origin main
 4. Select `app.py` as the entry point.
 5. Deploy.
 
-No application secret is needed. The source PDF, rendered pages, live PPTX and datasets are bundled locally, so confirm that the repository remains within the hosting platform's file-size limits.
+No application secret is needed. The editable deck, rendered pages, workbooks and datasets are bundled locally, so confirm that the repository remains within the hosting platform's file-size limits.
 
 ## Administrator customisation
 
@@ -39,16 +39,18 @@ No application secret is needed. The source PDF, rendered pages, live PPTX and d
 - Dataset catalogue: `data/dataset_registry.json`
 - Downloadable resources: `assets/downloads/`
 
-## Replacing the workshop PDF later
+## Rebuilding the workshop assets
 
-1. Put the new source PDF under `assets/downloads/`.
-2. Render each PDF page to PNG at a consistent DPI.
-3. Replace the images in `assets/slides/`.
-4. Update `assets/slides/slides_meta.json` with titles, summaries, facilitation notes and linked labs.
-5. Rebuild `assets/downloads/GenAI_Patient_Centric_Healthcare_Theory_Deck_Live_Presentation.pptx` from the new PDF page images.
-6. Update the source-PDF and PPTX filenames in `modules/theory.py` and `modules/resources.py` if the filenames change.
+1. Update the workflow catalogue or app content.
+2. Run `python scripts/build_masterclass_content.py`.
+3. Run `node scripts/build_presentation.mjs`.
+4. Run `python scripts/build_documents.py`.
+5. Run `node scripts/build_tool_matrix.mjs`.
+6. Render and visually verify the deck, PDFs, documents, and every spreadsheet sheet.
+7. Run `python scripts/build_kits.py`.
+8. Run `python -m unittest discover -s tests -v`.
 
-The app displays page images rather than reconstructing slide text in HTML. This preserves the original design and prevents text-box overlap at different browser widths. The PPTX uses full-slide images for the same reason, making it safe for live PowerPoint/Keynote/Google Slides presentation.
+The PowerPoint deck contains editable objects. The app displays exported slide previews for dependable browser presentation while preserving the editable PPTX as the source deliverable.
 
 ## Privacy architecture
 
