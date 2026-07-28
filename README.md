@@ -9,11 +9,50 @@ A local-first Streamlit application built around the supplied **Practical Tools 
 - no browser-reconstructed slide text, avoiding text overlap
 - curated directory of 29 healthcare, pharma, research, analytics and design tools
 - guided tool-demo laboratory for every listed tool
+- dedicated medical-imaging and multimodal-AI laboratory
+- ten chest X-ray, CT, MRI, ultrasound, mammography and musculoskeletal workflows
+- PNG, JPEG, TIFF and uncompressed DICOM upload and preview
+- local non-diagnostic pixel checks, modality-specific prompts and AI-draft auditing
 - one relevant synthetic dataset, demo record, prompt and verification checklist per tool
 - six 15-minute hands-on labs aligned with page 9 of the supplied deck
 - 18 synthetic CSV datasets covering clinical, patient, pharma, research and governance workflows
 - prompt studio, data explorer, case conference, governance workbench and assessment
 - downloadable updated workshop kit and tool-demo workbook
+
+## Medical Imaging & Multimodal AI Lab
+
+Open **Medical imaging lab** from the sidebar. The lab provides ten structured
+radiology demonstrations:
+
+1. Chest X-ray for acute breathlessness
+2. Chest X-ray for tubes and line position
+3. Non-contrast CT head
+4. CT pulmonary angiography
+5. MRI brain
+6. MRI spine
+7. Musculoskeletal trauma X-ray
+8. Abdominal ultrasound
+9. Obstetric ultrasound
+10. Mammography
+
+The app performs basic local technical image checks and creates a
+modality-specific prompt for an approved multimodal tool. It does **not** run a
+diagnostic classifier, sign a report, prescribe treatment or replace a qualified
+radiologist. DICOM metadata displayed by the app is restricted to selected
+technical tags; patient and study identifiers are deliberately excluded.
+
+### Imaging workflow
+
+1. Select a radiological case.
+2. Confirm that the image and context are synthetic or properly de-identified.
+3. Upload a PNG, JPEG, TIFF or uncompressed DICOM image.
+4. Review the image preview, technical indicators and limitations.
+5. Download the multimodal prompt and use it with an institution-approved account.
+6. Paste the resulting draft into the structural safety audit.
+7. Complete the professional checklist and export a de-identified session record.
+
+The export intentionally excludes image pixels, filenames, DICOM identifiers and
+AI-draft text.
 
 ## Safety
 
@@ -63,10 +102,11 @@ The browser normally opens at `http://localhost:8501`.
 
 ```text
 app.py
-modules/                 application pages and shared components
-data/                    18 synthetic datasets, tool directory and demo playbook
+modules/                 application pages, imaging core and shared components
+data/                    synthetic datasets, radiology cases and tool playbooks
 assets/slides/           10 rendered pages from the supplied PDF plus metadata
 assets/downloads/        supplied PDF, live PPTX deck, dataset ZIP, demo workbook and updated kit
+tests/                   unit tests for the local imaging workflow
 .streamlit/config.toml   visual theme and server settings
 requirements.txt
 ```
@@ -76,6 +116,8 @@ requirements.txt
 - Update presenter information in `modules/about.py`.
 - Edit the workshop timing in `modules/facilitator.py`.
 - Edit the six labs in `modules/content.py`.
+- Edit radiology cases in `data/radiology_case_library.json`.
+- Extend image handling and prompts in `modules/imaging_core.py`.
 - Add or revise tools in `data/tool_comparison_matrix.csv` and `data/tool_demo_playbook.json`.
 - Add a dataset to `data/` and register it in `data/dataset_registry.json`.
 - Replace the source PDF page images in `assets/slides/` and update `slides_meta.json`.
