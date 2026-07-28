@@ -1,0 +1,110 @@
+{
+  "outpatient_cases.csv": {
+    "name": "Outpatient cases",
+    "icon": "🏥",
+    "domain": "Clinical communication",
+    "description": "Synthetic outpatient presentations for counselling and follow-up planning."
+  },
+  "discharge_summaries.csv": {
+    "name": "Discharge summaries",
+    "icon": "📄",
+    "domain": "Patient communication",
+    "description": "Synthetic clinician-facing discharge records for plain-language rewriting."
+  },
+  "multilingual_counselling_cases.csv": {
+    "name": "Multilingual counselling cases",
+    "icon": "🌐",
+    "domain": "Patient education",
+    "description": "Synthetic cases with language, literacy, cultural context and teach-back goals."
+  },
+  "clinical_reasoning_cases.csv": {
+    "name": "Clinical reasoning cases",
+    "icon": "🩺",
+    "domain": "Clinical reasoning",
+    "description": "Synthetic presentations designed for common/cannot-miss differential checklists."
+  },
+  "adverse_event_reports.csv": {
+    "name": "Adverse-event reports",
+    "icon": "⚠️",
+    "domain": "Pharmacovigilance",
+    "description": "Synthetic AE intake records for seriousness screening and neutral narratives."
+  },
+  "patient_feedback.csv": {
+    "name": "Patient feedback",
+    "icon": "💬",
+    "domain": "Quality improvement",
+    "description": "Synthetic satisfaction and free-text feedback for theme and service-recovery analysis."
+  },
+  "clinical_trial_candidates.csv": {
+    "name": "Clinical-trial candidates",
+    "icon": "🧪",
+    "domain": "Clinical trials",
+    "description": "Synthetic candidate attributes for eligibility-summary training only."
+  },
+  "pharma_medical_queries.csv": {
+    "name": "Pharma medical queries",
+    "icon": "💊",
+    "domain": "Medical affairs",
+    "description": "Synthetic unsolicited queries for balanced non-promotional response workflows."
+  },
+  "research_questions.csv": {
+    "name": "Research questions",
+    "icon": "🔬",
+    "domain": "Research",
+    "description": "Synthetic PICO-style questions for search, screening and evidence-table demos."
+  },
+  "research_abstracts_sample.csv": {
+    "name": "Synthetic research abstracts",
+    "icon": "📚",
+    "domain": "Research",
+    "description": "Non-citable synthetic abstracts for extraction and gap-identification practice."
+  },
+  "hospital_workflows.csv": {
+    "name": "Hospital workflows",
+    "icon": "🔁",
+    "domain": "Operations",
+    "description": "Synthetic processes for bottleneck, RACI and future-state design exercises."
+  },
+  "patient_education_facts.csv": {
+    "name": "Patient education facts",
+    "icon": "🧾",
+    "domain": "Patient communication",
+    "description": "Synthetic fact-sheet inputs for Canva and general-purpose design tools."
+  },
+  "patient_journey_map.csv": {
+    "name": "Patient journey maps",
+    "icon": "🗺️",
+    "domain": "Patient centricity",
+    "description": "Synthetic stages, emotions and friction points for visual journey mapping."
+  },
+  "synthetic_manuscript_paragraphs.csv": {
+    "name": "Manuscript paragraphs",
+    "icon": "✍️",
+    "domain": "Academic writing",
+    "description": "Synthetic drafts containing overclaiming and transparency issues for editing practice."
+  },
+  "medical_communication_drafts.csv": {
+    "name": "Communication drafts",
+    "icon": "✉️",
+    "domain": "Professional writing",
+    "description": "Synthetic patient, referral, medical-affairs and service-recovery messages."
+  },
+  "pathway_diagram_briefs.csv": {
+    "name": "Diagram briefs",
+    "icon": "🧩",
+    "domain": "Scientific communication",
+    "description": "Synthetic visual briefs for diagrams, pathways and process figures."
+  },
+  "ai_governance_policy_scenarios.csv": {
+    "name": "AI governance scenarios",
+    "icon": "🛡️",
+    "domain": "Governance",
+    "description": "Synthetic use cases for risk classification, control design and stop conditions."
+  },
+  "case_conference_scenarios.csv": {
+    "name": "Case conference scenarios",
+    "icon": "🗣️",
+    "domain": "Discussion",
+    "description": "Six workshop debate cases linked to data and decision goals."
+  }
+}

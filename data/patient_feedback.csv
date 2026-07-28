@@ -1,0 +1,121 @@
+feedback_id,department,rating,waiting_time_minutes,theme,comment,priority,ai_demo_task
+FB-0001,Pharmacy,5,126,medicine availability,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0002,OPD,4,81,billing clarity,Doctor explained well but waiting time was long,high,Summarize patient pain points and convert into service recovery actions
+FB-0003,Teleconsultation,1,92,wait time,I could not understand the medication instructions,high,Summarize patient pain points and convert into service recovery actions
+FB-0004,Emergency,2,137,follow-up coordination,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0005,Billing,2,114,billing clarity,I wanted counselling in my local language,low,Summarize patient pain points and convert into service recovery actions
+FB-0006,Emergency,4,52,follow-up coordination,Follow-up call helped me feel safe,medium,Summarize patient pain points and convert into service recovery actions
+FB-0007,Billing,1,55,follow-up coordination,I wanted counselling in my local language,high,Summarize patient pain points and convert into service recovery actions
+FB-0008,OPD,4,59,medicine availability,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0009,OPD,1,142,cleanliness,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0010,Diagnostics,3,34,communication,Pharmacy did not have one medicine,high,Summarize patient pain points and convert into service recovery actions
+FB-0011,Inpatient Ward,4,85,cleanliness,Follow-up call helped me feel safe,high,Summarize patient pain points and convert into service recovery actions
+FB-0012,OPD,4,94,cleanliness,Report collection was delayed,medium,Summarize patient pain points and convert into service recovery actions
+FB-0013,Teleconsultation,5,177,communication,Pharmacy did not have one medicine,high,Summarize patient pain points and convert into service recovery actions
+FB-0014,Inpatient Ward,5,39,wait time,Report collection was delayed,low,Summarize patient pain points and convert into service recovery actions
+FB-0015,OPD,2,51,billing clarity,Report collection was delayed,high,Summarize patient pain points and convert into service recovery actions
+FB-0016,Diagnostics,2,112,cleanliness,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0017,Emergency,4,129,medicine availability,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0018,Pharmacy,2,40,medicine availability,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0019,OPD,4,96,cleanliness,Doctor explained well but waiting time was long,medium,Summarize patient pain points and convert into service recovery actions
+FB-0020,Teleconsultation,2,103,communication,I wanted counselling in my local language,medium,Summarize patient pain points and convert into service recovery actions
+FB-0021,Inpatient Ward,4,118,medicine availability,I wanted counselling in my local language,low,Summarize patient pain points and convert into service recovery actions
+FB-0022,OPD,1,61,cleanliness,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0023,Billing,3,78,communication,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0024,Teleconsultation,5,131,follow-up coordination,I could not understand the medication instructions,high,Summarize patient pain points and convert into service recovery actions
+FB-0025,Teleconsultation,1,144,billing clarity,Report collection was delayed,high,Summarize patient pain points and convert into service recovery actions
+FB-0026,Inpatient Ward,1,117,staff empathy,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0027,Teleconsultation,1,172,follow-up coordination,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0028,Pharmacy,1,94,medicine availability,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0029,Teleconsultation,1,65,staff empathy,The nurse was kind and supportive,high,Summarize patient pain points and convert into service recovery actions
+FB-0030,Pharmacy,5,161,follow-up coordination,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0031,Teleconsultation,5,57,communication,The nurse was kind and supportive,low,Summarize patient pain points and convert into service recovery actions
+FB-0032,Billing,5,76,billing clarity,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0033,Billing,3,73,billing clarity,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0034,Pharmacy,4,172,wait time,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0035,Emergency,2,87,communication,The nurse was kind and supportive,high,Summarize patient pain points and convert into service recovery actions
+FB-0036,Emergency,4,152,medicine availability,Pharmacy did not have one medicine,high,Summarize patient pain points and convert into service recovery actions
+FB-0037,Diagnostics,4,24,medicine availability,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0038,Pharmacy,5,99,follow-up coordination,I wanted counselling in my local language,medium,Summarize patient pain points and convert into service recovery actions
+FB-0039,OPD,3,28,cleanliness,I wanted counselling in my local language,high,Summarize patient pain points and convert into service recovery actions
+FB-0040,OPD,3,141,staff empathy,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0041,Emergency,4,131,staff empathy,Pharmacy did not have one medicine,medium,Summarize patient pain points and convert into service recovery actions
+FB-0042,Billing,3,152,billing clarity,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0043,Pharmacy,4,179,staff empathy,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0044,Teleconsultation,1,122,follow-up coordination,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0045,Diagnostics,2,5,medicine availability,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0046,Pharmacy,2,45,follow-up coordination,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0047,OPD,3,100,billing clarity,Billing counter was confusing,low,Summarize patient pain points and convert into service recovery actions
+FB-0048,Pharmacy,4,64,follow-up coordination,Follow-up call helped me feel safe,high,Summarize patient pain points and convert into service recovery actions
+FB-0049,OPD,1,5,follow-up coordination,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0050,Billing,1,62,communication,I wanted counselling in my local language,low,Summarize patient pain points and convert into service recovery actions
+FB-0051,Pharmacy,1,35,follow-up coordination,Follow-up call helped me feel safe,high,Summarize patient pain points and convert into service recovery actions
+FB-0052,OPD,2,63,medicine availability,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0053,Pharmacy,1,99,wait time,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0054,Teleconsultation,4,39,staff empathy,Billing counter was confusing,low,Summarize patient pain points and convert into service recovery actions
+FB-0055,OPD,5,161,cleanliness,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0056,Emergency,3,165,follow-up coordination,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0057,Diagnostics,5,60,follow-up coordination,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0058,OPD,2,155,staff empathy,Follow-up call helped me feel safe,medium,Summarize patient pain points and convert into service recovery actions
+FB-0059,Teleconsultation,4,40,billing clarity,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0060,Billing,1,158,communication,Pharmacy did not have one medicine,high,Summarize patient pain points and convert into service recovery actions
+FB-0061,Teleconsultation,1,173,staff empathy,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0062,Billing,5,53,cleanliness,Follow-up call helped me feel safe,medium,Summarize patient pain points and convert into service recovery actions
+FB-0063,Teleconsultation,1,66,staff empathy,I wanted counselling in my local language,medium,Summarize patient pain points and convert into service recovery actions
+FB-0064,Diagnostics,1,168,communication,I could not understand the medication instructions,high,Summarize patient pain points and convert into service recovery actions
+FB-0065,Pharmacy,1,38,billing clarity,Follow-up call helped me feel safe,high,Summarize patient pain points and convert into service recovery actions
+FB-0066,Billing,4,179,billing clarity,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0067,Billing,1,22,wait time,Doctor explained well but waiting time was long,medium,Summarize patient pain points and convert into service recovery actions
+FB-0068,OPD,2,106,wait time,Pharmacy did not have one medicine,high,Summarize patient pain points and convert into service recovery actions
+FB-0069,Diagnostics,5,113,staff empathy,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0070,Billing,5,44,cleanliness,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0071,Billing,3,57,wait time,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0072,Billing,3,167,medicine availability,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0073,Teleconsultation,4,66,follow-up coordination,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0074,OPD,1,121,medicine availability,Doctor explained well but waiting time was long,medium,Summarize patient pain points and convert into service recovery actions
+FB-0075,OPD,2,40,wait time,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0076,Billing,4,137,billing clarity,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0077,Inpatient Ward,3,73,communication,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0078,Diagnostics,3,74,staff empathy,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0079,OPD,5,132,follow-up coordination,I wanted counselling in my local language,high,Summarize patient pain points and convert into service recovery actions
+FB-0080,Diagnostics,3,150,wait time,Billing counter was confusing,medium,Summarize patient pain points and convert into service recovery actions
+FB-0081,Teleconsultation,2,31,billing clarity,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0082,OPD,5,8,wait time,The nurse was kind and supportive,low,Summarize patient pain points and convert into service recovery actions
+FB-0083,Diagnostics,4,43,billing clarity,Billing counter was confusing,low,Summarize patient pain points and convert into service recovery actions
+FB-0084,Inpatient Ward,5,172,staff empathy,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0085,Diagnostics,3,86,communication,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0086,OPD,5,133,billing clarity,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0087,Billing,2,16,staff empathy,Follow-up call helped me feel safe,low,Summarize patient pain points and convert into service recovery actions
+FB-0088,Pharmacy,4,84,staff empathy,Report collection was delayed,low,Summarize patient pain points and convert into service recovery actions
+FB-0089,OPD,5,99,medicine availability,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0090,Pharmacy,5,164,staff empathy,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0091,Diagnostics,3,55,cleanliness,The nurse was kind and supportive,low,Summarize patient pain points and convert into service recovery actions
+FB-0092,OPD,1,64,medicine availability,Report collection was delayed,high,Summarize patient pain points and convert into service recovery actions
+FB-0093,OPD,1,173,billing clarity,Follow-up call helped me feel safe,high,Summarize patient pain points and convert into service recovery actions
+FB-0094,Emergency,3,140,wait time,The nurse was kind and supportive,medium,Summarize patient pain points and convert into service recovery actions
+FB-0095,Emergency,4,76,wait time,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0096,Billing,2,110,staff empathy,Report collection was delayed,medium,Summarize patient pain points and convert into service recovery actions
+FB-0097,OPD,1,134,cleanliness,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0098,Billing,4,150,wait time,Doctor explained well but waiting time was long,medium,Summarize patient pain points and convert into service recovery actions
+FB-0099,Pharmacy,2,71,communication,Report collection was delayed,medium,Summarize patient pain points and convert into service recovery actions
+FB-0100,Diagnostics,3,74,billing clarity,The nurse was kind and supportive,low,Summarize patient pain points and convert into service recovery actions
+FB-0101,Teleconsultation,2,154,communication,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0102,Diagnostics,1,124,communication,Report collection was delayed,medium,Summarize patient pain points and convert into service recovery actions
+FB-0103,Pharmacy,1,58,cleanliness,I wanted counselling in my local language,medium,Summarize patient pain points and convert into service recovery actions
+FB-0104,Teleconsultation,4,35,billing clarity,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0105,Inpatient Ward,3,159,staff empathy,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0106,OPD,3,68,communication,Report collection was delayed,medium,Summarize patient pain points and convert into service recovery actions
+FB-0107,Inpatient Ward,5,81,wait time,Pharmacy did not have one medicine,low,Summarize patient pain points and convert into service recovery actions
+FB-0108,Teleconsultation,1,120,medicine availability,The nurse was kind and supportive,low,Summarize patient pain points and convert into service recovery actions
+FB-0109,Teleconsultation,4,40,wait time,I could not understand the medication instructions,low,Summarize patient pain points and convert into service recovery actions
+FB-0110,Teleconsultation,1,61,staff empathy,Billing counter was confusing,low,Summarize patient pain points and convert into service recovery actions
+FB-0111,Inpatient Ward,4,166,billing clarity,I could not understand the medication instructions,high,Summarize patient pain points and convert into service recovery actions
+FB-0112,Teleconsultation,5,24,billing clarity,Doctor explained well but waiting time was long,low,Summarize patient pain points and convert into service recovery actions
+FB-0113,Diagnostics,2,37,follow-up coordination,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0114,Diagnostics,1,17,wait time,Billing counter was confusing,high,Summarize patient pain points and convert into service recovery actions
+FB-0115,Inpatient Ward,4,106,staff empathy,I wanted counselling in my local language,low,Summarize patient pain points and convert into service recovery actions
+FB-0116,Diagnostics,4,49,follow-up coordination,Report collection was delayed,low,Summarize patient pain points and convert into service recovery actions
+FB-0117,Pharmacy,2,119,billing clarity,Billing counter was confusing,low,Summarize patient pain points and convert into service recovery actions
+FB-0118,Billing,5,67,cleanliness,Pharmacy did not have one medicine,medium,Summarize patient pain points and convert into service recovery actions
+FB-0119,Diagnostics,4,20,cleanliness,I could not understand the medication instructions,medium,Summarize patient pain points and convert into service recovery actions
+FB-0120,Diagnostics,4,56,communication,The nurse was kind and supportive,high,Summarize patient pain points and convert into service recovery actions

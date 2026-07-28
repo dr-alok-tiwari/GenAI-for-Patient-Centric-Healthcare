@@ -1,0 +1,81 @@
+candidate_id,age,sex,condition,ecog_status,egfr,hba1c,prior_therapy,access_context,ai_demo_task
+CT-001,69,Male,chronic kidney disease,0,76,9.6,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-002,68,Male,rheumatoid arthritis,2,100,8.1,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-003,19,Male,type 2 diabetes,1,31,10.2,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-004,51,Female,type 2 diabetes,1,48,5.9,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-005,70,Male,non-alcoholic fatty liver disease,0,56,8.5,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-006,29,Female,moderate asthma,2,73,10.3,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-007,54,Female,moderate asthma,1,91,8.3,biologic exposed,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-008,23,Male,metastatic breast cancer,1,105,6.6,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-009,76,Female,chronic kidney disease,1,44,7.2,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-010,19,Male,moderate asthma,1,42,10.0,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-011,63,Male,heart failure,3,103,5.9,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-012,28,Male,heart failure,3,109,10.6,one prior line,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-013,53,Female,heart failure,2,56,9.0,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-014,64,Female,heart failure,2,44,6.4,recent steroid use,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-015,72,Female,non-alcoholic fatty liver disease,0,51,8.7,recent steroid use,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-016,77,Female,rheumatoid arthritis,1,70,9.4,two prior lines,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-017,28,Male,heart failure,0,109,9.3,biologic exposed,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-018,34,Female,moderate asthma,1,36,7.3,none,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-019,42,Male,rheumatoid arthritis,3,49,10.2,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-020,52,Female,rheumatoid arthritis,0,89,9.7,one prior line,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-021,22,Male,non-alcoholic fatty liver disease,0,65,5.5,none,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-022,39,Female,moderate asthma,3,48,9.4,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-023,57,Female,rheumatoid arthritis,0,83,10.5,recent steroid use,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-024,28,Female,metastatic breast cancer,0,70,6.5,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-025,53,Female,heart failure,2,64,7.0,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-026,54,Female,chronic kidney disease,3,47,5.7,biologic exposed,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-027,36,Female,non-alcoholic fatty liver disease,3,53,5.9,one prior line,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-028,36,Male,metastatic breast cancer,3,42,7.1,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-029,75,Male,heart failure,2,39,8.9,one prior line,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-030,74,Male,rheumatoid arthritis,2,51,7.8,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-031,34,Female,moderate asthma,2,100,5.7,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-032,40,Female,non-alcoholic fatty liver disease,3,103,6.6,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-033,44,Male,chronic kidney disease,3,101,10.2,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-034,43,Female,non-alcoholic fatty liver disease,0,92,8.5,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-035,29,Male,moderate asthma,1,52,6.1,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-036,45,Female,moderate asthma,1,104,6.8,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-037,53,Female,rheumatoid arthritis,2,63,8.2,recent steroid use,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-038,51,Female,non-alcoholic fatty liver disease,3,42,7.6,recent steroid use,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-039,55,Female,non-alcoholic fatty liver disease,0,41,8.4,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-040,74,Male,type 2 diabetes,3,61,7.5,recent steroid use,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-041,48,Male,metastatic breast cancer,1,63,7.6,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-042,74,Male,type 2 diabetes,1,34,9.4,two prior lines,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-043,39,Male,non-alcoholic fatty liver disease,2,67,6.9,none,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-044,26,Male,type 2 diabetes,3,69,6.9,recent steroid use,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-045,23,Male,moderate asthma,3,55,10.3,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-046,73,Female,type 2 diabetes,0,93,9.7,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-047,50,Female,rheumatoid arthritis,1,95,10.1,one prior line,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-048,74,Male,non-alcoholic fatty liver disease,1,35,6.7,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-049,63,Male,moderate asthma,2,75,9.8,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-050,19,Female,moderate asthma,2,90,8.6,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-051,53,Male,type 2 diabetes,2,48,9.9,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-052,19,Female,rheumatoid arthritis,0,48,10.0,one prior line,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-053,32,Female,heart failure,1,62,8.9,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-054,76,Female,moderate asthma,1,104,9.7,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-055,69,Male,type 2 diabetes,2,82,10.2,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-056,31,Male,rheumatoid arthritis,2,94,9.9,recent steroid use,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-057,18,Male,chronic kidney disease,2,99,8.9,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-058,24,Male,rheumatoid arthritis,0,71,10.7,two prior lines,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-059,59,Female,heart failure,2,52,6.2,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-060,43,Male,heart failure,2,45,9.3,two prior lines,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-061,76,Female,rheumatoid arthritis,3,77,9.4,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-062,63,Female,moderate asthma,3,73,8.1,recent steroid use,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-063,36,Female,metastatic breast cancer,3,44,9.4,two prior lines,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-064,23,Male,moderate asthma,2,56,9.4,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-065,41,Male,type 2 diabetes,2,87,10.0,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-066,55,Female,chronic kidney disease,0,88,10.2,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-067,37,Female,rheumatoid arthritis,0,47,6.1,two prior lines,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-068,54,Female,rheumatoid arthritis,1,68,10.1,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-069,39,Female,heart failure,1,68,8.8,biologic exposed,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-070,31,Male,non-alcoholic fatty liver disease,1,101,9.5,none,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-071,57,Male,rheumatoid arthritis,3,79,7.7,biologic exposed,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-072,20,Male,chronic kidney disease,1,75,10.5,recent steroid use,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-073,19,Female,heart failure,0,108,9.4,two prior lines,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-074,26,Female,metastatic breast cancer,3,92,8.6,none,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-075,37,Male,type 2 diabetes,3,94,8.6,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-076,26,Female,type 2 diabetes,3,73,9.5,biologic exposed,urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-077,32,Female,moderate asthma,1,55,9.4,none,semi-urban,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-078,63,Male,heart failure,0,76,10.1,recent steroid use,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-079,21,Female,chronic kidney disease,0,41,8.9,none,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty
+CT-080,25,Male,rheumatoid arthritis,3,76,6.1,biologic exposed,rural,Screen against synthetic inclusion/exclusion criteria and explain uncertainty

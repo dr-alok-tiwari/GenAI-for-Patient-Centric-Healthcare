@@ -1,0 +1,19 @@
+dataset,icon,domain,rows,columns,description
+outpatient_cases.csv,🏥,Clinical communication,80,12,Synthetic outpatient presentations for counselling and follow-up planning.
+discharge_summaries.csv,📄,Patient communication,60,7,Synthetic clinician-facing discharge records for plain-language rewriting.
+multilingual_counselling_cases.csv,🌐,Patient education,60,11,"Synthetic cases with language, literacy, cultural context and teach-back goals."
+clinical_reasoning_cases.csv,🩺,Clinical reasoning,50,13,Synthetic presentations designed for common/cannot-miss differential checklists.
+adverse_event_reports.csv,⚠️,Pharmacovigilance,100,12,Synthetic AE intake records for seriousness screening and neutral narratives.
+patient_feedback.csv,💬,Quality improvement,120,8,Synthetic satisfaction and free-text feedback for theme and service-recovery analysis.
+clinical_trial_candidates.csv,🧪,Clinical trials,80,10,Synthetic candidate attributes for eligibility-summary training only.
+pharma_medical_queries.csv,💊,Medical affairs,90,8,Synthetic unsolicited queries for balanced non-promotional response workflows.
+research_questions.csv,🔬,Research,40,10,"Synthetic PICO-style questions for search, screening and evidence-table demos."
+research_abstracts_sample.csv,📚,Research,60,11,Non-citable synthetic abstracts for extraction and gap-identification practice.
+hospital_workflows.csv,🔁,Operations,40,9,"Synthetic processes for bottleneck, RACI and future-state design exercises."
+patient_education_facts.csv,🧾,Patient communication,40,10,Synthetic fact-sheet inputs for Canva and general-purpose design tools.
+patient_journey_map.csv,🗺️,Patient centricity,30,11,"Synthetic stages, emotions and friction points for visual journey mapping."
+synthetic_manuscript_paragraphs.csv,✍️,Academic writing,40,6,Synthetic drafts containing overclaiming and transparency issues for editing practice.
+medical_communication_drafts.csv,✉️,Professional writing,40,6,"Synthetic patient, referral, medical-affairs and service-recovery messages."
+pathway_diagram_briefs.csv,🧩,Scientific communication,30,7,"Synthetic visual briefs for diagrams, pathways and process figures."
+ai_governance_policy_scenarios.csv,🛡️,Governance,30,8,"Synthetic use cases for risk classification, control design and stop conditions."
+case_conference_scenarios.csv,🗣️,Discussion,6,8,Six workshop debate cases linked to data and decision goals.
