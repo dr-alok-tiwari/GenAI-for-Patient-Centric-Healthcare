@@ -3,7 +3,7 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from .common import badges, download_dataset, load_csv, load_json, record_to_text, section_header, set_visited
+from .common import ASSETS, badges, download_dataset, load_csv, load_json, record_to_text, section_header, set_visited
 from .content import LABS
 
 
@@ -19,7 +19,7 @@ def render() -> None:
     section_header(
         "90-minute lab",
         "Six case-based hands-on exercises",
-        "Each exercise mirrors page 9 of the supplied deck. Use the linked synthetic dataset, follow the selected tool's demo path, verify the output and document the professional decision.",
+        "Six 15-minute exercises prioritise medical-specific practice: prescription, image observation, discharge and language, clinical reasoning, pharmacovigilance, and evidence verification.",
         "🧪",
     )
 
@@ -49,6 +49,12 @@ def render() -> None:
         st.subheader("A. Select the case")
         record_id = st.selectbox("Synthetic record", df[lab["id_col"]].astype(str).tolist(), key=f"record_{lab['id']}")
         row = df.loc[df[lab["id_col"]].astype(str) == record_id].iloc[0]
+        if "image_file" in row and str(row["image_file"]):
+            st.image(
+                ASSETS / "medical" / str(row["image_file"]),
+                caption="Fully synthetic training asset",
+                use_container_width=True,
+            )
         st.dataframe(row.rename("Value"), use_container_width=True)
         download_dataset(lab["dataset"], f"Download {lab['dataset']}", key=f"labdata_{lab['id']}")
 
@@ -69,11 +75,11 @@ def render() -> None:
                 for i in range(1, 5):
                     st.markdown(f"**{i}. {demo[f'Step {i}']}**")
                 st.warning(demo["Safety note"])
-        if lab["id"] == "lab2":
+        if lab.get("language_selector"):
             language = st.selectbox(
                 "Target language",
-                [str(row.get("preferred_language", "Hindi")), "Hindi", "Marathi", "Konkani", "Bengali", "Tamil", "Telugu", "Kannada", "Malayalam", "Spanish"],
-                key="lab2_language",
+                ["Hindi", "Marathi", "Bengali", "Tamil", "Telugu", "Kannada", "Malayalam"],
+                key=f"{lab['id']}_language",
             )
         else:
             language = "Hindi"
@@ -92,7 +98,7 @@ def render() -> None:
                 key=f"download_{lab['id']}_{selected_tool}",
                 use_container_width=True,
             )
-            if lab["id"] in {"lab4", "lab6"}:
+            if lab["id"] in {"lab5", "lab6"}:
                 st.info("For a batch-analysis tool, upload the full CSV. For a chat-only demo, start with the selected row and then compare with a small sample.")
         with tabs[1]:
             st.markdown("**Timebox: 4 min verify**")

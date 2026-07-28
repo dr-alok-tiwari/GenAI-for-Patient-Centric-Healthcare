@@ -1,49 +1,42 @@
-# Updated GenAI Healthcare MDP Workshop Guide
+# Alkem AI Masterclass — Delivery Quick Start
 
-## Programme structure
+## Timing
 
-- **Theory:** 60 minutes using the supplied 10-page PDF, zoomable app presenter, or the bundled live PPTX deck
-- **Hands-on:** 90 minutes using six 15-minute case laboratories
-- **Data boundary:** synthetic records only during public-tool demonstrations
-- **Decision boundary:** AI drafts and analyses; qualified professionals verify and decide
+- 0–60 minutes: four-pillar theory and medical demonstrations
+- 60–150 minutes: six 15-minute hands-on labs
 
-## Universal tool-demo protocol
+## Four pillars
 
-1. State the use case and the professional decision that remains human.
-2. Download or select the linked synthetic dataset.
-3. Open the official tool website from the application.
-4. Use the supplied prompt or tool-specific workflow.
-5. Check factual fidelity, missing-data behaviour, evidence traceability, privacy fit and potential harm.
-6. Record one of four outcomes: **accept, edit, reject or escalate**.
+1. Patient Understanding and Engagement
+2. Clinical Workflow and Decision Support
+3. Pharma, Research and Professional Productivity
+4. Responsible AI, Governance and Implementation
 
-## Six deck-aligned laboratories
+## Live demonstrations
 
-1. **Discharge note simplification:** rewrite a complex discharge summary in plain language, with a medication schedule, warning signs and follow-up.
-2. **Multilingual counselling:** create a culturally appropriate diabetes counselling script and verify translation accuracy.
-3. **Differential diagnosis with safety checks:** create a ranked checklist with supporting and refuting features, red flags and suggested work-up.
-4. **Adverse-event triage:** classify synthetic reports by seriousness, expectedness and causality, then identify cases requiring human escalation.
-5. **AI-assisted literature review:** frame a research question, find candidate evidence, build a mini evidence table and verify source details.
-6. **Patient-feedback dashboard:** analyse sentiment and complaints by department and translate findings into quality-improvement actions.
+1. Synthetic prescription extraction and patient explanation
+2. Synthetic medical-image observation boundary
+3. Pharmacovigilance intake structuring
+4. Evidence search and citation verification
 
-## Tool coverage
+Always prepare an offline fallback using the included synthetic assets and templates.
 
-The application includes 29 guided demonstrations and 18 synthetic case datasets across general-purpose assistants, evidence and research tools, clinical-support tools, analytics platforms, writing assistants, translation and visual-design tools. Each demonstration includes:
+## Lab rhythm
 
-- official website link
-- access and risk badge
-- linked synthetic dataset
-- selectable synthetic record
-- four-step instructions
-- ready-to-copy prompt or workflow
-- expected output
-- verification checklist
-- safety note and human decision record
+- 3 minutes: orient to source and boundary
+- 6 minutes: run the bounded prompt
+- 4 minutes: verify against source
+- 2 minutes: accept, edit, reject, or escalate
 
-## Facilitation advice
+## Non-negotiable safety boundary
 
-Do not compare tools only by fluency or visual attractiveness. Compare them on fidelity, omissions, citations, reproducibility, privacy suitability, amount of professional correction and whether the output improves a patient, research or operational outcome.
+Use only synthetic, public, or institution-approved de-identified data. Do not ask participants to upload real patient records, prescriptions, scans, company-confidential documents, or identifiable safety reports. GenAI does not own diagnosis, prescribing, triage, PV, trial, publication, regulatory, or governance decisions.
 
-## Live presentation options
+## Start the app
 
-- **Inside Streamlit:** open the Theory deck page, use the zoom buttons, and click full-screen for browser-based teaching.
-- **As PPT:** download `GenAI_Patient_Centric_Healthcare_Theory_Deck_Live_Presentation.pptx` from Theory deck or Resources. It is rebuilt as full-slide images from the supplied PDF to preserve layout and avoid text overlap.
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Open the Theory deck, enable Facilitator mode, and use the Facilitator dashboard for the agenda, demo alternatives, coverage diagnostics, and lab completion.

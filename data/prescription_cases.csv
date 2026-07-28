@@ -1,0 +1,7 @@
+prescription_id,synthetic_patient,medicine,instructions,duration,follow_up_or_warning,source_status,image_file
+RX-SYN-001,Aarav Mehta,Metformin 500 mg,One tablet with evening meal,30 days,Review in 4 weeks,Fully synthetic; education only,synthetic_prescription_01.png
+RX-SYN-002,Nisha Rao,Amlodipine 5 mg,One tablet every morning,30 days,Check blood pressure log in 2 weeks,Fully synthetic; education only,synthetic_prescription_02.png
+RX-SYN-003,Kabir Shah,Amoxicillin 500 mg,One capsule three times daily,5 days,Seek help for rash or breathing difficulty,Fully synthetic; education only,synthetic_prescription_03.png
+RX-SYN-004,Meera Iyer,Pantoprazole 40 mg,One tablet before breakfast,14 days,Review if symptoms persist,Fully synthetic; education only,synthetic_prescription_04.png
+RX-SYN-005,Rohan Das,Salbutamol inhaler 100 mcg,Two puffs as directed in the supplied plan,As needed per plan,Urgent help for severe breathlessness,Fully synthetic; education only,synthetic_prescription_05.png
+RX-SYN-006,Tara Singh,Levothyroxine 50 mcg,One tablet on an empty stomach each morning,30 days,TSH review as documented by clinician,Fully synthetic; education only,synthetic_prescription_06.png

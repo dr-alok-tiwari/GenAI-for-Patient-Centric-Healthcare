@@ -106,5 +106,17 @@
     "icon": "🗣️",
     "domain": "Discussion",
     "description": "Six workshop debate cases linked to data and decision goals."
+  },
+  "prescription_cases.csv": {
+    "name": "Synthetic prescriptions",
+    "icon": "💊",
+    "domain": "Patient understanding",
+    "description": "Fully synthetic prescription images and source values for extraction, explanation, ambiguity handling, and human verification."
+  },
+  "imaging_cases.csv": {
+    "name": "Synthetic medical images",
+    "icon": "🩻",
+    "domain": "Clinical workflow",
+    "description": "Fully synthetic image cases for practising image-quality checks, structured observation, limitations, and escalation—not diagnosis."
   }
 }

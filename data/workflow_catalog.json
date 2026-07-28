@@ -1,0 +1,946 @@
+[
+  {
+    "workflow_id": "P1-RX-01",
+    "title": "Prescription extraction and patient explanation",
+    "icon": "💊",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Doctor",
+      "Nurse",
+      "Pharmacist",
+      "Patient educator"
+    ],
+    "task": "Explain a prescription",
+    "input_type": "Prescription image",
+    "output_type": "Structured medicine table and teach-back script",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English",
+      "Hindi",
+      "Marathi",
+      "Bengali",
+      "Tamil",
+      "Telugu",
+      "Kannada",
+      "Malayalam"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Google Gemini",
+      "Microsoft Copilot"
+    ],
+    "dataset": "prescription_cases.csv",
+    "case_context": "A synthetic prescription must be transcribed faithfully, explained in plain language, and checked by a clinician or pharmacist.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nTranscribe only legible content. Separate exact extraction from plain-language explanation. Flag every ambiguous token as unreadable; never guess.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nExact transcription table; plain-language explanation; ambiguity log; warning that the prescription itself remains authoritative; three teach-back questions.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Exact transcription table; plain-language explanation; ambiguity log; warning that the prescription itself remains authoritative; three teach-back questions.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No prescribing, substitution, interaction decision, adherence judgement, or reconstruction of unreadable content.",
+    "human_reviewer": "clinician or registered pharmacist",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P1-DC-02",
+    "title": "Discharge plan with teach-back",
+    "icon": "🏠",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Doctor",
+      "Nurse",
+      "Patient educator"
+    ],
+    "task": "Simplify a discharge summary",
+    "input_type": "Clinical text",
+    "output_type": "One-page patient action plan",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English",
+      "Hindi",
+      "Marathi",
+      "Bengali",
+      "Tamil",
+      "Telugu",
+      "Kannada",
+      "Malayalam"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Claude",
+      "Google Gemini",
+      "Doximity Ask"
+    ],
+    "dataset": "discharge_summaries.csv",
+    "case_context": "A patient needs a clear home-care plan without any change to medicines, dates, red flags, or follow-up.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nRewrite at approximately Grade 6 reading level. Preserve all clinical facts. Make urgent warning signs and follow-up actions prominent.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nWhat happened; exact medicine/action schedule; red flags; follow-up; three teach-back questions; missing-information list.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "What happened; exact medicine/action schedule; red flags; follow-up; three teach-back questions; missing-information list.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No new clinical advice, dose change, diagnosis, or omission of escalation instructions.",
+    "human_reviewer": "treating clinician or discharge nurse",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P1-LANG-03",
+    "title": "Multilingual counselling",
+    "icon": "🌐",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Doctor",
+      "Nurse",
+      "Pharmacist",
+      "Patient educator"
+    ],
+    "task": "Translate patient counselling",
+    "input_type": "Clinical text",
+    "output_type": "Bilingual counselling script",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English",
+      "Hindi",
+      "Marathi",
+      "Bengali",
+      "Tamil",
+      "Telugu",
+      "Kannada",
+      "Malayalam"
+    ],
+    "primary_tool": "Google Gemini",
+    "alternative_tools": [
+      "DeepL",
+      "ChatGPT",
+      "Microsoft Copilot"
+    ],
+    "dataset": "multilingual_counselling_cases.csv",
+    "case_context": "A patient prefers another language; medicine and test names must remain stable and the translation needs clinical review.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nCreate aligned English and target-language sections. Keep medicine, product, and test names unchanged. Avoid idioms and cultural assumptions.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nBilingual script; terminology cross-check; teach-back questions; items requiring fluent clinical review.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Bilingual script; terminology cross-check; teach-back questions; items requiring fluent clinical review.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No unreviewed translation for clinical action and no changes to source meaning.",
+    "human_reviewer": "clinician plus fluent-language reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P1-EDU-04",
+    "title": "Patient education fact sheet",
+    "icon": "🧾",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Patient educator"
+    ],
+    "task": "Create patient education",
+    "input_type": "Evidence facts",
+    "output_type": "Patient fact sheet",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English",
+      "Hindi",
+      "Marathi",
+      "Bengali",
+      "Tamil",
+      "Telugu",
+      "Kannada",
+      "Malayalam"
+    ],
+    "primary_tool": "Canva",
+    "alternative_tools": [
+      "ChatGPT",
+      "Google Gemini"
+    ],
+    "dataset": "patient_education_facts.csv",
+    "case_context": "Approved source facts need to become an accessible education aid with clear action steps.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nUse only supplied facts; distinguish general information from advice; include a reading-level and accessibility review.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nPlain-language fact sheet; source-fact map; accessibility checklist; clinician approval box.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Plain-language fact sheet; source-fact map; accessibility checklist; clinician approval box.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No promotional claim, unsupported benefit, personalised diagnosis, or treatment instruction.",
+    "human_reviewer": "medical reviewer and patient-education reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P1-JOURNEY-05",
+    "title": "Patient journey friction map",
+    "icon": "🗺️",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Hospital leader",
+      "Quality professional",
+      "Patient educator"
+    ],
+    "task": "Map a patient journey",
+    "input_type": "Tabular data",
+    "output_type": "Journey map and improvement backlog",
+    "risk_level": "Low",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Napkin AI",
+    "alternative_tools": [
+      "Canva",
+      "Gamma",
+      "Julius AI"
+    ],
+    "dataset": "patient_journey_map.csv",
+    "case_context": "A service team wants to turn synthetic journey observations into testable improvements.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nMap stages, patient goals, friction, emotions, handoffs, and measurable opportunities without inferring protected attributes.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nJourney table; top three improvement hypotheses; owner; measure; fairness and access check.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Journey table; top three improvement hypotheses; owner; measure; fairness and access check.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No demographic inference, automated prioritisation of care, or unsupported operational claim.",
+    "human_reviewer": "service owner with patient representative",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P1-FEEDBACK-06",
+    "title": "Patient feedback action plan",
+    "icon": "💬",
+    "pillar": "Patient Understanding and Engagement",
+    "roles": [
+      "Hospital leader",
+      "Quality professional"
+    ],
+    "task": "Analyse patient feedback",
+    "input_type": "Tabular data",
+    "output_type": "Service-recovery action card",
+    "risk_level": "Low",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "primary_tool": "Julius AI",
+    "alternative_tools": [
+      "ChatGPT",
+      "Microsoft Copilot"
+    ],
+    "dataset": "patient_feedback.csv",
+    "case_context": "Patient comments need to become measurable service-recovery and process-improvement actions.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nRetain patient voice, cluster themes transparently, state limitations, and propose reversible tests with owners and measures.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nTheme summary; representative synthetic examples; immediate recovery action; long-term action; owner; metric.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Theme summary; representative synthetic examples; immediate recovery action; long-term action; owner; metric.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No inference of protected attributes or automatic complaint adjudication.",
+    "human_reviewer": "quality lead and service owner",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-XRAY-01",
+    "title": "Structured medical-image observation",
+    "icon": "🩻",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Doctor",
+      "Radiologist",
+      "Medical student"
+    ],
+    "task": "Review a medical image safely",
+    "input_type": "Medical image",
+    "output_type": "Observation checklist and escalation note",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Google Gemini"
+    ],
+    "dataset": "imaging_cases.csv",
+    "case_context": "A fully synthetic chest radiograph is used to practise separating image-quality checks, observations, uncertainty, and escalation.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nDescribe only visible, non-diagnostic observations. First assess image adequacy and limitations. Explicitly state that specialised medical-image interpretation requires a qualified clinician and validated tools.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nImage adequacy checklist; structured visible observations; uncertainty; cannot-assess list; escalation and human-review note.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Image adequacy checklist; structured visible observations; uncertainty; cannot-assess list; escalation and human-review note.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No diagnosis, triage clearance, treatment recommendation, or claim that a general-purpose model can read specialised medical images reliably.",
+    "human_reviewer": "qualified radiologist or treating clinician",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-REASON-02",
+    "title": "Differential and red-flag checklist",
+    "icon": "🩺",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Doctor",
+      "Medical student"
+    ],
+    "task": "Structure clinical reasoning",
+    "input_type": "Clinical text",
+    "output_type": "Differential checklist",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "OpenEvidence",
+    "alternative_tools": [
+      "Glass Health",
+      "Pathway",
+      "ChatGPT"
+    ],
+    "dataset": "clinical_reasoning_cases.csv",
+    "case_context": "A synthetic case may contain a serious symptom; the exercise must prevent anchoring and retain uncertainty.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nSeparate common/likely, cannot-miss, supporting evidence, opposing evidence, missing history/examination, and urgent escalation triggers.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nClinician-review differential checklist; cognitive-bias prompt; missing-data list; urgency triggers.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Clinician-review differential checklist; cognitive-bias prompt; missing-data list; urgency triggers.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No final diagnosis, treatment plan, prescription, or autonomous triage decision.",
+    "human_reviewer": "qualified treating clinician",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-NOTE-03",
+    "title": "Clinical note structuring",
+    "icon": "📝",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Doctor",
+      "Nurse"
+    ],
+    "task": "Draft clinical documentation",
+    "input_type": "Clinical text",
+    "output_type": "Reviewable structured note",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Microsoft Copilot",
+    "alternative_tools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "dataset": "outpatient_cases.csv",
+    "case_context": "A synthetic encounter must be structured without hiding missing facts or adding a diagnosis.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nOrganise the record into a reviewable note. Label direct facts, patient-reported facts, inference, and missing information.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nStructured note; missing-information panel; fidelity table; sign-off checklist.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Structured note; missing-information panel; fidelity table; sign-off checklist.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No autonomous coding, diagnosis, order, prescription, or insertion into a patient record without review.",
+    "human_reviewer": "authoring clinician",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-HANDOFF-04",
+    "title": "Safe handoff brief",
+    "icon": "🔄",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Doctor",
+      "Nurse"
+    ],
+    "task": "Create a clinical handoff",
+    "input_type": "Clinical text",
+    "output_type": "SBAR handoff",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Claude",
+      "Microsoft Copilot"
+    ],
+    "dataset": "outpatient_cases.csv",
+    "case_context": "A care team needs a concise handoff that keeps uncertainty, red flags, and pending information visible.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nDraft an SBAR handoff using source facts only. Surface pending items, escalation triggers, and items requiring verbal confirmation.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nSBAR brief; pending-items list; closed-loop confirmation checklist.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "SBAR brief; pending-items list; closed-loop confirmation checklist.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No removal of uncertainty, unverified assumption, or replacement for live escalation.",
+    "human_reviewer": "sending and receiving clinicians",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-WORKFLOW-05",
+    "title": "Hospital workflow redesign",
+    "icon": "🏥",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Hospital leader",
+      "Quality professional"
+    ],
+    "task": "Improve a clinical workflow",
+    "input_type": "Process data",
+    "output_type": "Current/future-state workflow",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Napkin AI",
+    "alternative_tools": [
+      "Gamma",
+      "Julius AI",
+      "Microsoft Copilot"
+    ],
+    "dataset": "hospital_workflows.csv",
+    "case_context": "A synthetic process has delay and rework; leaders need a future-state pilot with controls.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nMap current state, bottlenecks, failure modes, human decisions, future state, measures, and stop conditions.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nCurrent/future-state map; RACI; measures; risk controls; 30-day pilot.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Current/future-state map; RACI; measures; risk controls; 30-day pilot.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No removal of safety checks or automatic redesign of staffing or clinical authority.",
+    "human_reviewer": "clinical process owner and quality lead",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P2-COMMS-06",
+    "title": "Referral or follow-up communication",
+    "icon": "✉️",
+    "pillar": "Clinical Workflow and Decision Support",
+    "roles": [
+      "Doctor",
+      "Nurse"
+    ],
+    "task": "Improve professional communication",
+    "input_type": "Clinical text",
+    "output_type": "Clear professional message",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Grammarly",
+    "alternative_tools": [
+      "ChatGPT",
+      "Claude",
+      "QuillBot"
+    ],
+    "dataset": "medical_communication_drafts.csv",
+    "case_context": "A clinical message needs improved clarity and empathy without changing facts or commitments.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nEdit for clarity, tone, and actionability while preserving every fact, date, dose, and commitment.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nEdited message; change log; unresolved ambiguity list; sender approval box.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Edited message; change log; unresolved ambiguity list; sender approval box.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No new promise, clinical claim, result, instruction, or recipient action.",
+    "human_reviewer": "original author or responsible clinician",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-PV-01",
+    "title": "Pharmacovigilance intake structuring",
+    "icon": "⚠️",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Pharmacovigilance professional",
+      "Medical affairs professional"
+    ],
+    "task": "Triage an adverse-event report",
+    "input_type": "Safety report",
+    "output_type": "PV intake package",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Claude",
+      "Google Gemini",
+      "Julius AI"
+    ],
+    "dataset": "adverse_event_reports.csv",
+    "case_context": "A synthetic spontaneous report is incomplete; AI may structure intake but not decide causality or expectedness.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nStructure seriousness screening, chronology, minimum criteria, missing fields, and neutral follow-up questions.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nNeutral narrative; seriousness-screening rationale; missing fields; follow-up questions; escalation triggers.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Neutral narrative; seriousness-screening rationale; missing fields; follow-up questions; escalation triggers.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No causality, expectedness, reportability, coding, or submission decision.",
+    "human_reviewer": "qualified pharmacovigilance or safety physician reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-MI-02",
+    "title": "Medical information response plan",
+    "icon": "📨",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Medical affairs professional",
+      "Doctor"
+    ],
+    "task": "Draft a medical information response",
+    "input_type": "Medical query",
+    "output_type": "Balanced response workflow",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "OpenEvidence",
+    "alternative_tools": [
+      "PubMed",
+      "ChatGPT",
+      "Claude"
+    ],
+    "dataset": "pharma_medical_queries.csv",
+    "case_context": "An unsolicited healthcare-professional query needs a balanced, non-promotional, evidence-traceable response route.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nClassify the query; identify approved-source needs, search steps, MLR/PV escalation, and balanced response structure.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nQuery classification; evidence plan; balanced outline; escalation and documentation checklist.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Query classification; evidence plan; balanced outline; escalation and documentation checklist.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No promotion, patient-specific treatment recommendation, fabricated citation, or bypass of approved review.",
+    "human_reviewer": "medical information professional with MLR/PV routing",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-EVID-03",
+    "title": "Reproducible evidence search",
+    "icon": "🔎",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Researcher",
+      "Medical affairs professional",
+      "Doctor"
+    ],
+    "task": "Search and verify evidence",
+    "input_type": "Research question",
+    "output_type": "Search protocol and evidence table",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "PubMed",
+    "alternative_tools": [
+      "Elicit",
+      "Consensus",
+      "Semantic Scholar",
+      "SciSpace"
+    ],
+    "dataset": "research_questions.csv",
+    "case_context": "A team needs a rapid evidence scan whose search log and screening decisions remain reproducible.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nCreate PICO/PECO, search concepts, inclusion/exclusion criteria, extraction columns, citation checks, and AI-use disclosure.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nSearch protocol; screening log; evidence-table schema; citation-verification checklist; limitation note.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Search protocol; screening log; evidence-table schema; citation-verification checklist; limitation note.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No invented paper, citation, evidence claim, or replacement for a systematic-review protocol.",
+    "human_reviewer": "qualified researcher or medical reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-SYNTH-04",
+    "title": "Evidence synthesis from supplied sources",
+    "icon": "📚",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Researcher",
+      "Medical affairs professional"
+    ],
+    "task": "Synthesize supplied evidence",
+    "input_type": "Research abstracts",
+    "output_type": "Source-linked synthesis",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "NotebookLM",
+    "alternative_tools": [
+      "Elicit",
+      "SciSpace",
+      "ChatGPT"
+    ],
+    "dataset": "research_abstracts_sample.csv",
+    "case_context": "Synthetic abstracts are used to practise source-grounded extraction; they are not citable clinical evidence.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nExtract study design, population, intervention/exposure, outcomes, limitations, and uncertainty. Link every statement to a supplied source ID.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nEvidence table; source-linked synthesis; conflict and gap log; interpretation boundary.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Evidence table; source-linked synthesis; conflict and gap log; interpretation boundary.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No treating recommendation, cross-source fact blending without attribution, or citation of synthetic abstracts.",
+    "human_reviewer": "qualified research or medical reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-MANUSCRIPT-05",
+    "title": "Manuscript claim and transparency review",
+    "icon": "✍️",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Researcher",
+      "Medical writer"
+    ],
+    "task": "Review a manuscript draft",
+    "input_type": "Manuscript text",
+    "output_type": "Claim-and-evidence edit log",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Paperpal",
+    "alternative_tools": [
+      "Grammarly",
+      "ChatGPT",
+      "Claude"
+    ],
+    "dataset": "synthetic_manuscript_paragraphs.csv",
+    "case_context": "A synthetic draft includes overclaiming and missing disclosure; the team must preserve author accountability.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nIdentify claims, qualifiers, unsupported inference, reporting gaps, and AI-disclosure needs. Suggest edits without inventing data.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nTracked claim table; cautious rewrite; reporting checklist; author verification list.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Tracked claim table; cautious rewrite; reporting checklist; author verification list.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No authorship decision, invented data/citation, concealment of AI use, or approval for submission.",
+    "human_reviewer": "author and accountable scientific reviewer",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P3-TRIAL-06",
+    "title": "Clinical-trial eligibility summary",
+    "icon": "🧪",
+    "pillar": "Pharma, Research and Professional Productivity",
+    "roles": [
+      "Clinical research professional",
+      "Doctor"
+    ],
+    "task": "Summarise trial eligibility",
+    "input_type": "Tabular data",
+    "output_type": "Pre-screen summary",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Microsoft Copilot",
+      "Julius AI"
+    ],
+    "dataset": "clinical_trial_candidates.csv",
+    "case_context": "Synthetic candidate fields may be summarised for manual pre-screening; enrolment stays investigator-owned.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nMap supplied fields to criteria, mark missing data, and produce questions for manual source verification.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nCriteria map; missing-data list; neutral pre-screen summary; investigator decision box.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Criteria map; missing-data list; neutral pre-screen summary; investigator decision box.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No eligibility, enrolment, consent, randomisation, or medical decision.",
+    "human_reviewer": "qualified investigator or delegated trial professional",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-RISK-01",
+    "title": "AI use-case risk classification",
+    "icon": "🛡️",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "AI governance professional",
+      "Hospital leader",
+      "Medical affairs professional"
+    ],
+    "task": "Classify AI risk",
+    "input_type": "Governance scenario",
+    "output_type": "Risk-and-control card",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Microsoft Copilot",
+      "Claude"
+    ],
+    "dataset": "ai_governance_policy_scenarios.csv",
+    "case_context": "A proposed AI use case must be classified by data, impact, autonomy, reach, and reversibility.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nClassify risks, identify accountable roles, minimum controls, monitoring, incident route, and stop conditions.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nRisk tier; rationale; control checklist; approval route; monitoring metric; stop condition.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Risk tier; rationale; control checklist; approval route; monitoring metric; stop condition.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No automatic approval, legal conclusion, regulatory classification, or bypass of institutional policy.",
+    "human_reviewer": "multidisciplinary AI governance group",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-PILOT-02",
+    "title": "Responsible 30-day pilot canvas",
+    "icon": "🧭",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "Hospital leader",
+      "Quality professional",
+      "AI governance professional"
+    ],
+    "task": "Design a responsible pilot",
+    "input_type": "Governance scenario",
+    "output_type": "Pilot canvas",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Gamma",
+    "alternative_tools": [
+      "Microsoft Copilot",
+      "ChatGPT"
+    ],
+    "dataset": "ai_governance_policy_scenarios.csv",
+    "case_context": "A low-risk use case needs a measurable, reversible pilot with named ownership.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nDefine pain point, current baseline, data boundary, users, human review, success measure, monitoring, and stop condition.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nOne-page pilot canvas; RACI; baseline and measures; review cadence; rollback plan.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "One-page pilot canvas; RACI; baseline and measures; review cadence; rollback plan.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No deployment, procurement, processing agreement, or approval decision.",
+    "human_reviewer": "accountable business owner and governance approver",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-PRIVACY-03",
+    "title": "Data-boundary and privacy review",
+    "icon": "🔐",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "Data privacy professional",
+      "AI governance professional",
+      "Hospital leader"
+    ],
+    "task": "Review data privacy",
+    "input_type": "Governance scenario",
+    "output_type": "Data-boundary checklist",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Microsoft Copilot",
+    "alternative_tools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "dataset": "ai_governance_policy_scenarios.csv",
+    "case_context": "A workflow must specify allowed data, minimum necessary fields, account type, retention, access, and incident handling.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nCreate a data-flow inventory and questions for privacy, security, legal, and clinical-safety review.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nData-flow table; allowed/prohibited data; access/retention checklist; unresolved decisions.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Data-flow table; allowed/prohibited data; access/retention checklist; unresolved decisions.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No legal advice, approval, transfer-impact decision, or processing of real personal data.",
+    "human_reviewer": "privacy, security, legal, and clinical-safety reviewers",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-VENDOR-04",
+    "title": "AI vendor due-diligence brief",
+    "icon": "📋",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "Procurement professional",
+      "AI governance professional",
+      "Hospital leader"
+    ],
+    "task": "Assess an AI vendor",
+    "input_type": "Governance scenario",
+    "output_type": "Due-diligence questionnaire",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Microsoft Copilot",
+    "alternative_tools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "dataset": "ai_governance_policy_scenarios.csv",
+    "case_context": "A team needs consistent vendor questions on data use, security, performance, monitoring, and exit.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nDraft verifiable due-diligence questions and evidence requests; mark which responses require independent validation.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nQuestionnaire; evidence-request list; red flags; owner; decision log template.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Questionnaire; evidence-request list; red flags; owner; decision log template.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No vendor selection, contract approval, certification claim, or unsupported comparison.",
+    "human_reviewer": "procurement, privacy, security, legal, and clinical-safety team",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-MONITOR-05",
+    "title": "Post-pilot monitoring plan",
+    "icon": "📈",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "AI governance professional",
+      "Quality professional",
+      "Hospital leader"
+    ],
+    "task": "Monitor an AI workflow",
+    "input_type": "Governance scenario",
+    "output_type": "Monitoring and incident plan",
+    "risk_level": "High",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "Julius AI",
+    "alternative_tools": [
+      "Microsoft Copilot",
+      "ChatGPT"
+    ],
+    "dataset": "ai_governance_policy_scenarios.csv",
+    "case_context": "An approved pilot needs fidelity, safety, fairness, usage, override, and incident monitoring.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nDefine metrics, thresholds, sampling, subgroup/language checks, audit evidence, incident route, and stop rules.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nMonitoring table; thresholds; review cadence; incident workflow; rollback trigger.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Monitoring table; thresholds; review cadence; incident workflow; rollback trigger.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No unattended monitoring decision, silent model change, or automated continuation after threshold breach.",
+    "human_reviewer": "accountable owner with safety, quality, and governance reviewers",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  },
+  {
+    "workflow_id": "P4-CONFERENCE-06",
+    "title": "Multidisciplinary case conference",
+    "icon": "🗣️",
+    "pillar": "Responsible AI, Governance and Implementation",
+    "roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "AI governance professional",
+      "Hospital leader"
+    ],
+    "task": "Debate an AI implementation",
+    "input_type": "Case scenario",
+    "output_type": "Decision record",
+    "risk_level": "Moderate",
+    "data_sensitivity": "Synthetic only",
+    "languages": [
+      "English"
+    ],
+    "primary_tool": "ChatGPT",
+    "alternative_tools": [
+      "Gamma",
+      "Napkin AI"
+    ],
+    "dataset": "case_conference_scenarios.csv",
+    "case_context": "A cross-functional group must debate benefits, harms, evidence, accountability, and stop conditions.",
+    "prompt_template": "ROLE\nYou are a drafting assistant supporting a qualified {reviewer}. You do not replace professional judgement.\n\nINPUT\n{record}\n\nTASK\nGenerate stakeholder questions, competing perspectives, unresolved evidence needs, and a documented decision route.\n\nCONSTRAINTS\nUse only the supplied synthetic record. Mark missing information and uncertainty. Do not invent facts, doses, dates, diagnoses, results, or references. Do not take autonomous clinical, regulatory, safety, or publication decisions.\n\nOUTPUT\nStakeholder map; benefits/harms table; unresolved questions; accept/edit/reject/escalate record.\n\nVERIFY\nEnd with a source-fidelity checklist and an accept / edit / reject / escalate decision box for the qualified reviewer.",
+    "expected_output": "Stakeholder map; benefits/harms table; unresolved questions; accept/edit/reject/escalate record.",
+    "verification": [
+      "Compare every fact against the supplied source record",
+      "Keep missing information and uncertainty visible",
+      "Check that no medicine, dose, date, diagnosis, result, or citation was invented",
+      "Record the qualified human's accept, edit, reject, or escalate decision"
+    ],
+    "prohibited_actions": "No fabricated consensus, suppression of dissent, or final institutional approval.",
+    "human_reviewer": "multidisciplinary governance chair",
+    "time_minutes": 12,
+    "last_verified": "2026-07-28"
+  }
+]

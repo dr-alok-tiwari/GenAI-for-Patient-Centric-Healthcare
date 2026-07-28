@@ -89,7 +89,7 @@ def render() -> None:
     section_header(
         "60-minute theory",
         "Interactive deck navigator",
-        "The original app deck has been replaced with the supplied 10-page workshop presentation. Pages are rendered as images so text remains fixed, readable and free from browser-layout overlap.",
+        "Navigate the concise, fully refreshed 12-slide Alkem AI Masterclass deck. The presentation is structured around four pillars and medical-specific examples, with source links in speaker notes.",
         "🖥️",
     )
     meta = _load_meta()
@@ -118,7 +118,7 @@ def render() -> None:
     current = next(m for m in meta if m["number"] == selected_num)
     left, right = st.columns([1.45, .55], gap="large")
     with left:
-        st.caption("Live presentation mode: zoom in/out inside the slide, or click full screen to teach directly from the app. For a true PowerPoint slideshow, download the PPTX below and open it in PowerPoint/Keynote/Google Slides.")
+        st.caption("Live presentation mode: zoom in/out inside the slide, or click full screen. Download the editable 16:9 PPTX for PowerPoint, Keynote, or Google Slides.")
         presenter_height = st.slider("Presentation viewport height", 520, 1000, 720, 20, help="Increase this when projecting on a large display.")
         _render_live_presenter(current["image"], f'Page {selected_num}: {current["title"]}', presenter_height)
         nav1, nav2, nav3, nav4 = st.columns([1, 1, 1.25, 1.25])
@@ -131,9 +131,9 @@ def render() -> None:
                 st.session_state.theory_slide_num = selected_num + 1
                 st.rerun()
         with nav3:
-            download_asset("Download live PPTX", "GenAI_Patient_Centric_Healthcare_Theory_Deck_Live_Presentation.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "theory_pptx")
+            download_asset("Download editable PPTX", "Alkem_AI_Masterclass_Healthcare.pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "theory_pptx")
         with nav4:
-            download_asset("Download PDF", "Practical-Tools-for-Doctors-and-Pharma-Professionals.pdf", "application/pdf", "theory_pdf")
+            download_asset("Download PDF", "Alkem_AI_Masterclass_Healthcare.pdf", "application/pdf", "theory_pdf")
     with right:
         st.markdown(
             f"<div class='info-card'><div class='section-label'>{current['chapter']}</div><h3>{current['title']}</h3><p>{current['summary']}</p></div>",

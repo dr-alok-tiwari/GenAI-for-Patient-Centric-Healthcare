@@ -18,7 +18,84 @@
     "Safety note": "Use synthetic or institution-approved data only; personal/public accounts are not an approved destination for PHI.",
     "Risk level": "Medium",
     "Official URL": "https://chatgpt.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Clinical research professional",
+      "Data privacy professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Medical student",
+      "Medical writer",
+      "Nurse",
+      "Patient educator",
+      "Pharmacist",
+      "Pharmacovigilance professional",
+      "Procurement professional",
+      "Quality professional",
+      "Radiologist",
+      "Researcher"
+    ],
+    "Input types": [
+      "Case scenario",
+      "Clinical text",
+      "Evidence facts",
+      "Governance scenario",
+      "Manuscript text",
+      "Medical image",
+      "Medical query",
+      "Prescription image",
+      "Research abstracts",
+      "Safety report",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-RX-01",
+      "P1-DC-02",
+      "P1-LANG-03",
+      "P1-EDU-04",
+      "P1-FEEDBACK-06",
+      "P2-XRAY-01",
+      "P2-REASON-02",
+      "P2-NOTE-03",
+      "P2-HANDOFF-04",
+      "P2-COMMS-06",
+      "P3-PV-01",
+      "P3-MI-02",
+      "P3-SYNTH-04",
+      "P3-MANUSCRIPT-05",
+      "P3-TRIAL-06",
+      "P4-RISK-01",
+      "P4-PILOT-02",
+      "P4-PRIVACY-03",
+      "P4-VENDOR-04",
+      "P4-MONITOR-05",
+      "P4-CONFERENCE-06"
+    ]
   },
   {
     "tool_id": 2,
@@ -39,7 +116,40 @@
     "Safety note": "Verify translation clinically and use approved account/data settings.",
     "Risk level": "Medium",
     "Official URL": "https://gemini.google.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Medical student",
+      "Nurse",
+      "Patient educator",
+      "Pharmacist",
+      "Pharmacovigilance professional",
+      "Radiologist"
+    ],
+    "Input types": [
+      "Clinical text",
+      "Evidence facts",
+      "Medical image",
+      "Prescription image",
+      "Safety report"
+    ],
+    "Workflow IDs": [
+      "P1-RX-01",
+      "P1-DC-02",
+      "P1-LANG-03",
+      "P1-EDU-04",
+      "P2-XRAY-01",
+      "P3-PV-01"
+    ]
   },
   {
     "tool_id": 3,
@@ -60,7 +170,55 @@
     "Safety note": "Tenant and organisational data controls determine appropriate use.",
     "Risk level": "Medium",
     "Official URL": "https://copilot.microsoft.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Clinical research professional",
+      "Data privacy professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Nurse",
+      "Patient educator",
+      "Pharmacist",
+      "Procurement professional",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Clinical text",
+      "Governance scenario",
+      "Prescription image",
+      "Process data",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-RX-01",
+      "P1-LANG-03",
+      "P1-FEEDBACK-06",
+      "P2-NOTE-03",
+      "P2-HANDOFF-04",
+      "P2-WORKFLOW-05",
+      "P3-TRIAL-06",
+      "P4-RISK-01",
+      "P4-PILOT-02",
+      "P4-PRIVACY-03",
+      "P4-VENDOR-04",
+      "P4-MONITOR-05"
+    ]
   },
   {
     "tool_id": 4,
@@ -81,7 +239,51 @@
     "Safety note": "Do not use identifiable or confidential information in unapproved accounts.",
     "Risk level": "High",
     "Official URL": "https://claude.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Data privacy professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Medical writer",
+      "Nurse",
+      "Patient educator",
+      "Pharmacovigilance professional",
+      "Procurement professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Clinical text",
+      "Governance scenario",
+      "Manuscript text",
+      "Medical query",
+      "Safety report"
+    ],
+    "Workflow IDs": [
+      "P1-DC-02",
+      "P2-NOTE-03",
+      "P2-HANDOFF-04",
+      "P2-COMMS-06",
+      "P3-PV-01",
+      "P3-MI-02",
+      "P3-MANUSCRIPT-05",
+      "P4-RISK-01",
+      "P4-PRIVACY-03",
+      "P4-VENDOR-04"
+    ]
   },
   {
     "tool_id": 5,
@@ -102,7 +304,21 @@
     "Safety note": "Citations can be irrelevant or weak; verify source quality and applicability.",
     "Risk level": "Medium",
     "Official URL": "https://www.perplexity.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 6,
@@ -123,7 +339,20 @@
     "Safety note": "Only upload sources approved for the selected account and workspace.",
     "Risk level": "Low",
     "Official URL": "https://notebooklm.google/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research abstracts"
+    ],
+    "Workflow IDs": [
+      "P3-SYNTH-04"
+    ]
   },
   {
     "tool_id": 7,
@@ -144,7 +373,24 @@
     "Safety note": "AI-assisted search is not automatically exhaustive; retain a reproducible protocol.",
     "Risk level": "Low",
     "Official URL": "https://elicit.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research abstracts",
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03",
+      "P3-SYNTH-04"
+    ]
   },
   {
     "tool_id": 8,
@@ -165,7 +411,21 @@
     "Safety note": "Verify study design, population and full-text details before use.",
     "Risk level": "Low",
     "Official URL": "https://consensus.app/search/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 9,
@@ -186,7 +446,21 @@
     "Safety note": "TLDRs support screening but do not replace reading the paper.",
     "Risk level": "Low",
     "Official URL": "https://www.semanticscholar.org/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 10,
@@ -207,7 +481,24 @@
     "Safety note": "Use as a source-of-truth search database; GenAI-generated query terms still need review.",
     "Risk level": "Low",
     "Official URL": "https://pubmed.ncbi.nlm.nih.gov/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Medical query",
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-MI-02",
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 11,
@@ -228,7 +519,24 @@
     "Safety note": "Check extracted numbers and claims against the original paper.",
     "Risk level": "Low",
     "Official URL": "https://scispace.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research abstracts",
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03",
+      "P3-SYNTH-04"
+    ]
   },
   {
     "tool_id": 12,
@@ -249,7 +557,21 @@
     "Safety note": "A graph is exploratory and not a systematic search.",
     "Risk level": "Low",
     "Official URL": "https://www.connectedpapers.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 13,
@@ -270,7 +592,21 @@
     "Safety note": "Poor seed selection can distort the discovery path.",
     "Risk level": "Low",
     "Official URL": "https://www.researchrabbit.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 14,
@@ -291,7 +627,21 @@
     "Safety note": "Clean imported metadata and remove duplicates before citation.",
     "Risk level": "Low",
     "Official URL": "https://www.zotero.org/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Researcher"
+    ],
+    "Input types": [
+      "Research question"
+    ],
+    "Workflow IDs": [
+      "P3-EVID-03"
+    ]
   },
   {
     "tool_id": 15,
@@ -312,7 +662,20 @@
     "Safety note": "Do not prototype with real patient data unless the environment is formally approved.",
     "Risk level": "High",
     "Official URL": "https://aistudio.google.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical student"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P2-REASON-02"
+    ]
   },
   {
     "tool_id": 16,
@@ -333,7 +696,26 @@
     "Safety note": "AI-generated medical wording and visuals require content review and accessibility checks.",
     "Risk level": "Low",
     "Official URL": "https://www.canva.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement"
+    ],
+    "Roles": [
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Patient educator",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Evidence facts",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-EDU-04",
+      "P1-JOURNEY-05"
+    ]
   },
   {
     "tool_id": 17,
@@ -354,7 +736,33 @@
     "Safety note": "Review every statistic, process claim and visual before presenting.",
     "Risk level": "Low",
     "Official URL": "https://gamma.app/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Patient educator",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Case scenario",
+      "Governance scenario",
+      "Process data",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-JOURNEY-05",
+      "P2-WORKFLOW-05",
+      "P4-PILOT-02",
+      "P4-CONFERENCE-06"
+    ]
   },
   {
     "tool_id": 18,
@@ -375,7 +783,30 @@
     "Safety note": "Ensure visual simplification does not hide clinical or operational exceptions.",
     "Risk level": "Low",
     "Official URL": "https://www.napkin.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Patient educator",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Case scenario",
+      "Process data",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-JOURNEY-05",
+      "P2-WORKFLOW-05",
+      "P4-CONFERENCE-06"
+    ]
   },
   {
     "tool_id": 19,
@@ -396,7 +827,39 @@
     "Safety note": "Do not upload identifiable feedback or sensitive free text to an unapproved workspace.",
     "Risk level": "Medium",
     "Official URL": "https://julius.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement",
+      "Patient Understanding and Engagement",
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity",
+      "Pharma, Research and Professional Productivity",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Clinical research professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Patient educator",
+      "Pharmacovigilance professional",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Governance scenario",
+      "Process data",
+      "Safety report",
+      "Tabular data"
+    ],
+    "Workflow IDs": [
+      "P1-JOURNEY-05",
+      "P1-FEEDBACK-06",
+      "P2-WORKFLOW-05",
+      "P3-PV-01",
+      "P3-TRIAL-06",
+      "P4-MONITOR-05"
+    ]
   },
   {
     "tool_id": 20,
@@ -417,7 +880,24 @@
     "Safety note": "Clinician-only decision support; never treat the output as an autonomous diagnosis.",
     "Risk level": "High",
     "Official URL": "https://www.openevidence.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical affairs professional",
+      "Medical student"
+    ],
+    "Input types": [
+      "Clinical text",
+      "Medical query"
+    ],
+    "Workflow IDs": [
+      "P2-REASON-02",
+      "P3-MI-02"
+    ]
   },
   {
     "tool_id": 21,
@@ -438,7 +918,20 @@
     "Safety note": "Qualified clinical review is mandatory; verify evidence and patient context.",
     "Risk level": "High",
     "Official URL": "https://glass.health/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical student"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P2-REASON-02"
+    ]
   },
   {
     "tool_id": 22,
@@ -459,7 +952,21 @@
     "Safety note": "Regional and professional verification restrictions apply; use only within approved clinical workflows.",
     "Risk level": "High",
     "Official URL": "https://www.doximity.com/ask/overview",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement"
+    ],
+    "Roles": [
+      "Doctor",
+      "Nurse",
+      "Patient educator"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P1-DC-02"
+    ]
   },
   {
     "tool_id": 23,
@@ -480,7 +987,20 @@
     "Safety note": "Availability and product integration may vary; clinical judgement remains decisive.",
     "Risk level": "High",
     "Official URL": "https://www.pathway.md/for-providers",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical student"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P2-REASON-02"
+    ]
   },
   {
     "tool_id": 24,
@@ -501,7 +1021,20 @@
     "Safety note": "Authors remain responsible for accuracy, originality and AI disclosure.",
     "Risk level": "Low",
     "Official URL": "https://paperpal.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Medical writer",
+      "Researcher"
+    ],
+    "Input types": [
+      "Manuscript text"
+    ],
+    "Workflow IDs": [
+      "P3-MANUSCRIPT-05"
+    ]
   },
   {
     "tool_id": 25,
@@ -522,7 +1055,25 @@
     "Safety note": "Do not paste confidential content into an unapproved account.",
     "Risk level": "Low",
     "Official URL": "https://www.grammarly.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support",
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Doctor",
+      "Medical writer",
+      "Nurse",
+      "Researcher"
+    ],
+    "Input types": [
+      "Clinical text",
+      "Manuscript text"
+    ],
+    "Workflow IDs": [
+      "P2-COMMS-06",
+      "P3-MANUSCRIPT-05"
+    ]
   },
   {
     "tool_id": 26,
@@ -543,7 +1094,20 @@
     "Safety note": "Paraphrasing can silently change medical meaning; manual comparison is required.",
     "Risk level": "Medium",
     "Official URL": "https://quillbot.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Clinical Workflow and Decision Support"
+    ],
+    "Roles": [
+      "Doctor",
+      "Nurse"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P2-COMMS-06"
+    ]
   },
   {
     "tool_id": 27,
@@ -564,7 +1128,20 @@
     "Safety note": "Avoid ghostwriting, fabricated citations and undisclosed AI use.",
     "Risk level": "Low",
     "Official URL": "https://jenni.ai/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Pharma, Research and Professional Productivity"
+    ],
+    "Roles": [
+      "Medical writer",
+      "Researcher"
+    ],
+    "Input types": [
+      "Manuscript text"
+    ],
+    "Workflow IDs": [
+      "P3-MANUSCRIPT-05"
+    ]
   },
   {
     "tool_id": 28,
@@ -585,7 +1162,36 @@
     "Safety note": "Check scientific accuracy and publication/licensing terms.",
     "Risk level": "Low",
     "Official URL": "https://www.biorender.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation",
+      "Responsible AI, Governance and Implementation"
+    ],
+    "Roles": [
+      "AI governance professional",
+      "Data privacy professional",
+      "Doctor",
+      "Hospital leader",
+      "Medical affairs professional",
+      "Procurement professional",
+      "Quality professional"
+    ],
+    "Input types": [
+      "Case scenario",
+      "Governance scenario"
+    ],
+    "Workflow IDs": [
+      "P4-RISK-01",
+      "P4-PILOT-02",
+      "P4-PRIVACY-03",
+      "P4-VENDOR-04",
+      "P4-MONITOR-05",
+      "P4-CONFERENCE-06"
+    ]
   },
   {
     "tool_id": 29,
@@ -606,6 +1212,21 @@
     "Safety note": "Translation quality does not guarantee clinical equivalence or cultural appropriateness.",
     "Risk level": "Medium",
     "Official URL": "https://www.deepl.com/",
-    "Verified on": "2026-07-27"
+    "Verified on": "2026-07-28",
+    "Pillars": [
+      "Patient Understanding and Engagement"
+    ],
+    "Roles": [
+      "Doctor",
+      "Nurse",
+      "Patient educator",
+      "Pharmacist"
+    ],
+    "Input types": [
+      "Clinical text"
+    ],
+    "Workflow IDs": [
+      "P1-LANG-03"
+    ]
   }
 ]
